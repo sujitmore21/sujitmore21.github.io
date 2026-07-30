@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujit More | Senior Flutter & Mobile Architect</title>
+  <meta name="description" content="Official Personal Portfolio of Sujit More - Senior Flutter Developer with 9+ years experience architecting high-performance mobile, web, fintech, and real-time trading applications.">
+  <meta name="keywords" content="Sujit More, Sujitmore, Sujitmore.github.io, Flutter Developer, Senior Flutter Engineer, Clean Architecture, Riverpod, BLoC, Mobile Engineer, Pune, ICICI Bank US, MoneyMic, Crypto Trading">
+  
+  <!-- OpenGraph Meta -->
+  <meta property="og:title" content="Sujit More | Senior Flutter & Mobile Architect">
+  <meta property="og:description" content="9+ Years Software Engineering Experience (6+ Flutter, 3 Android). Specializing in Fintech, Copy Trading, and Enterprise Mobile Apps.">
+  <meta property="og:url" content="https://Sujitmore.github.io/">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">SM</div>
+        <span>Sujit<span class="gradient-text">.More</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" title="Toggle Light/Dark Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+        <button class="mobile-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <button class="mobile-nav-close">&times;</button>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#architecture" class="nav-link">Architecture</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <div style="margin-top: 20px;">
+      <a href="https://github.com/sujitmore21" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%;"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge-wrap">
+          <div class="availability-dot"></div>
+          <span class="badge"><i class="fa-solid fa-code-branch"></i> Senior Mobile Architect</span>
+        </div>
+        <h1 class="hero-title">
+          Architecting <br>
+          <span class="typing-effect" id="typingTarget">Senior Flutter Architect</span>
+        </h1>
+        <p class="hero-subtitle">
+          Senior Flutter Engineer with <strong>9+ years of engineering experience</strong> (6+ Flutter, 3 Android). Specializing in 
+          <strong>Fintech, Real-Time Copy Trading, Banking (ICICI Bank US)</strong>, Clean Architecture, MVVM, and low-latency WebSockets & MQTT systems.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> View Featured Projects</a>
+          <a href="https://github.com/sujitmore21" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+          <button class="btn btn-secondary" onclick="copyToClipboard('sujitmore21@gmail.com', 'Email')"><i class="fa-solid fa-envelope"></i> sujitmore21@gmail.com</button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3 class="stat-number" data-count="9" data-suffix="+">9+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number" data-count="6" data-suffix="+">6+</h3>
+            <p>Years Flutter</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number" data-count="7" data-suffix="+">7+</h3>
+            <p>Apps Shipped</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number" data-count="500" data-suffix="k+">500k+</h3>
+            <p>Active Users</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Code Widget -->
+      <div class="hero-visual">
+        <div class="code-card">
+          <div class="code-header">
+            <div class="dots">
+              <div class="dot dot-red"></div>
+              <div class="dot dot-yellow"></div>
+              <div class="dot dot-green"></div>
+            </div>
+            <div class="code-title">sujit_more_architect.dart</div>
+          </div>
+          <div class="code-body code-font">
+            <span class="code-keyword">class</span> <span class="code-class">FlutterArchitect</span> <span class="code-keyword">extends</span> <span class="code-class">SeniorDeveloper</span> {<br>
+            &nbsp;&nbsp;<span class="code-keyword">final</span> String name = <span class="code-string">'Sujit More'</span>;<br>
+            &nbsp;&nbsp;<span class="code-keyword">final</span> int totalExperienceYears = <span class="code-val">9</span>;<br>
+            &nbsp;&nbsp;<span class="code-keyword">final</span> List&lt;String&gt; domains = [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Fintech & Banking'</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Crypto Trading'</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Logistics & Telecom'</span><br>
+            &nbsp;&nbsp;];<br><br>
+            &nbsp;&nbsp;<span class="code-comment">// High-performance real-time engine</span><br>
+            &nbsp;&nbsp;<span class="code-keyword">void</span> <span class="code-func">buildRealtimeApp</span>() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-func">connectWebSocket</span>(url: <span class="code-string">'wss://market-data'</span>);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-func">applyCleanArchitecture</span>();<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-func">shipToAppStoreAndPlayStore</span>();<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </div>
+
+          <!-- Live Market Data Simulation -->
+          <div class="ticker-widget">
+            <div class="ticker-pair">
+              <div class="ticker-icon"><i class="fa-brands fa-bitcoin"></i></div>
+              <span>BTC/USD</span>
+            </div>
+            <div class="ticker-price" id="btcPrice">$64,250.50</div>
+            <div class="ticker-status"><i class="fa-solid fa-wifi"></i> LIVE STREAM</div>
+          </div>
+        </div>
+
+        <div class="floating-badge floating-badge-1">
+          <div class="floating-icon"><i class="fa-brands fa-flutter"></i></div>
+          <div class="floating-text">
+            <h5>Flutter Web, iOS & Android</h5>
+            <p>Clean Arch + Riverpod / BLoC</p>
+          </div>
+        </div>
+
+        <div class="floating-badge floating-badge-2">
+          <div class="floating-icon" style="color: var(--accent-emerald); background: rgba(0,245,160,0.15);"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="floating-text">
+            <h5>Low Latency Trading</h5>
+            <p>WebSockets & MQTT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <span class="badge" style="margin: 0 auto 12px auto; display: table;"><i class="fa-solid fa-layer-group"></i> Expertise</span>
+      <h2 class="section-title">Technical <span class="gradient-text">Skills & Tech Stack</span></h2>
+      <p class="section-subtitle">A comprehensive breakdown of frameworks, state management tools, architecture patterns, and cloud backends I master.</p>
+
+      <div class="skills-tabs">
+        <button class="tab-btn active" data-tab="all">All Skills</button>
+        <button class="tab-btn" data-tab="core">Core Mobile</button>
+        <button class="tab-btn" data-tab="state">State & Arch</button>
+        <button class="tab-btn" data-tab="realtime">Real-Time & Backend</button>
+        <button class="tab-btn" data-tab="devops">DevOps & Testing</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Card 1 -->
+        <div class="skill-card" data-group="core">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-brands fa-flutter"></i></div>
+            <div class="skill-info">
+              <h4>Flutter Framework</h4>
+              <span>6+ Years Experience</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Flutter Web</span>
+            <span class="skill-tag">iOS</span>
+            <span class="skill-tag">Android</span>
+            <span class="skill-tag">Custom Painter</span>
+            <span class="skill-tag">MethodChannels</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="skill-card" data-group="core">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="skill-info">
+              <h4>Programming Languages</h4>
+              <span>9+ Years Experience</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Dart</span>
+            <span class="skill-tag">Kotlin</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="skill-card" data-group="state">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="skill-info">
+              <h4>State Management</h4>
+              <span>Production Proven</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Riverpod</span>
+            <span class="skill-tag">BLoC / Cubit</span>
+            <span class="skill-tag">Provider</span>
+            <span class="skill-tag">GetX</span>
+            <span class="skill-tag">Redux</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="skill-card" data-group="state">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div class="skill-info">
+              <h4>Architecture Patterns</h4>
+              <span>Scalable Enterprise</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Clean Architecture</span>
+            <span class="skill-tag">MVVM</span>
+            <span class="skill-tag">Modular Feature Structure</span>
+            <span class="skill-tag">Repository Pattern</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="skill-card" data-group="realtime">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="skill-info">
+              <h4>Real-Time & Streaming</h4>
+              <span>Sub-Second Latency</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">WebSockets</span>
+            <span class="skill-tag">Socket.IO</span>
+            <span class="skill-tag">MQTT</span>
+            <span class="skill-tag">Live Order Book</span>
+            <span class="skill-tag">Push Alerts</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="skill-card" data-group="realtime">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+            <div class="skill-info">
+              <h4>Backend & Cloud</h4>
+              <span>Integrations</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Firebase Auth</span>
+            <span class="skill-tag">Firestore</span>
+            <span class="skill-tag">FCM</span>
+            <span class="skill-tag">Supabase</span>
+            <span class="skill-tag">RESTful APIs</span>
+            <span class="skill-tag">GraphQL</span>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="skill-card" data-group="devops">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-gears"></i></div>
+            <div class="skill-info">
+              <h4>CI/CD & Testing</h4>
+              <span>Automated Pipelines</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Fastlane</span>
+            <span class="skill-tag">Codemagic</span>
+            <span class="skill-tag">Unit Testing</span>
+            <span class="skill-tag">Widget Testing</span>
+            <span class="skill-tag">Integration Testing</span>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="skill-card" data-group="devops">
+          <div class="skill-card-header">
+            <div class="skill-icon"><i class="fa-solid fa-credit-card"></i></div>
+            <div class="skill-info">
+              <h4>Payment Gateways</h4>
+              <span>Secure Transactions</span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Razorpay</span>
+            <span class="skill-tag">UPI</span>
+            <span class="skill-tag">Google Pay</span>
+            <span class="skill-tag">Stripe</span>
+            <span class="skill-tag">In-App Purchases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Showcase -->
+  <section class="section" id="projects">
+    <div class="container">
+      <span class="badge" style="margin: 0 auto 12px auto; display: table;"><i class="fa-solid fa-laptop-code"></i> Portfolio</span>
+      <h2 class="section-title">Featured <span class="gradient-text">Production Projects</span></h2>
+      <p class="section-subtitle">Selected enterprise and commercial applications architected for global audiences across mobile and web platforms.</p>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="fintech">Fintech & Copy Trading</button>
+        <button class="filter-btn" data-filter="banking">Enterprise Banking</button>
+        <button class="filter-btn" data-filter="crypto">Crypto Exchanges</button>
+        <button class="filter-btn" data-filter="logistics">Logistics & Telecom</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="fintech">
+          <div class="project-banner">
+            <span class="project-category-badge">Fintech & Copy Trading</span>
+            <div class="project-icon-badge"><i class="fa-solid fa-chart-line"></i></div>
+          </div>
+          <div class="project-content">
+            <div class="project-company">Orangebits • 2024–Present</div>
+            <h3 class="project-title">MoneyMic US</h3>
+            <p class="project-desc">Real-time copy trading platform enabling Web & Mobile portfolio tracking, expert trader discovery, and automated execution of market/limit orders via sub-second WebSockets & MQTT.</p>
+            <div class="project-tech-list">
+              <span class="project-tech-item">Flutter Web/Mobile</span>
+              <span class="project-tech-item">MVVM</span>
+              <span class="project-tech-item">Socket.IO</span>
+              <span class="project-tech-item">Supabase</span>
+              <span class="project-tech-item">Go Router</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link open-modal" data-project="moneymic">View Architecture Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="banking">
+          <div class="project-banner" style="background: linear-gradient(135deg, rgba(255, 117, 140, 0.3), rgba(255, 183, 3, 0.15));">
+            <span class="project-category-badge">Enterprise Banking</span>
+            <div class="project-icon-badge" style="background: linear-gradient(135deg, #d32f2f, #f44336);"><i class="fa-solid fa-building-columns"></i></div>
+          </div>
+          <div class="project-content">
+            <div class="project-company">Orangebits • 2024–Present</div>
+            <h3 class="project-title">ICICI Bank US</h3>
+            <p class="project-desc">Secure digital banking application for US users. Features account management, secure transaction processing, data encryption, and compliant UI/UX adhering to US banking standards.</p>
+            <div class="project-tech-list">
+              <span class="project-tech-item">Flutter</span>
+              <span class="project-tech-item">Clean Architecture</span>
+              <span class="project-tech-item">MVVM</span>
+              <span class="project-tech-item">AES Encryption</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link open-modal" data-project="icici">View Architecture Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="crypto fintech">
+          <div class="project-banner" style="background: linear-gradient(135deg, rgba(127, 83, 172, 0.4), rgba(0, 242, 254, 0.2));">
+            <span class="project-category-badge">Crypto Derivatives</span>
+            <div class="project-icon-badge" style="background: linear-gradient(135deg, #7f53ac, #647eee);"><i class="fa-solid fa-coins"></i></div>
+          </div>
+          <div class="project-content">
+            <div class="project-company">Fibitpro • 2023–2024</div>
+            <h3 class="project-title">BitProEX</h3>
+            <p class="project-desc">Global crypto derivatives exchange featuring spot trading, derivative contracts, real-time order books, and interactive portfolio dashboards powered by BLoC state management.</p>
+            <div class="project-tech-list">
+              <span class="project-tech-item">Flutter</span>
+              <span class="project-tech-item">BLoC</span>
+              <span class="project-tech-item">WebSockets</span>
+              <span class="project-tech-item">Clean Arch</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link open-modal" data-project="bitproex">View Architecture Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="fintech crypto">
+          <div class="project-banner">
+            <span class="project-category-badge">Payment Gateway</span>
+            <div class="project-icon-badge" style="background: var(--gradient-accent); color: #060911;"><i class="fa-solid fa-wallet"></i></div>
+          </div>
+          <div class="project-content">
+            <div class="project-company">Fibitpro • 2023–2024</div>
+            <h3 class="project-title">Rampwiz Gateway</h3>
+            <p class="project-desc">Fiat-to-crypto payment gateway integrating instant KYC verification APIs, fiat deposit/withdrawal rails, Razorpay, UPI, and wallet management flows.</p>
+            <div class="project-tech-list">
+              <span class="project-tech-item">Flutter</span>
+              <span class="project-tech-item">BLoC</span>
+              <span class="project-tech-item">Razorpay / UPI</span>
+              <span class="project-tech-item">KYC API</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link open-modal" data-project="rampwiz">View Architecture Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="logistics">
+          <div class="project-banner">
+            <span class="project-category-badge">Logistics & Shipping</span>
+            <div class="project-icon-badge" style="background: linear-gradient(135deg, #f093fb, #f5576c);"><i class="fa-solid fa-ship"></i></div>
+          </div>
+          <div class="project-content">
+            <div class="project-company">Portall Infosystems (J.M. Baxi)</div>
+            <h3 class="project-title">Diabos Global Shipping</h3>
+            <p class="project-desc">Global shipping disbursement management system built with offline-first capabilities using SQLite for field agents operating in low-connectivity port environments.</p>
+            <div class="project-tech-list">
+              <span class="project-tech-item">Flutter</span>
+              <span class="project-tech-item">SQLite</span>
+              <span class="project-tech-item">Background Sync</span>
+              <span class="project-tech-item">GetX</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link open-modal" data-project="diabos">View Architecture Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="logistics">
+          <div class="project-banner">
+            <span class="project-category-badge">Telecom / Enterprise</span>
+            <div class="project-icon-badge" style="background: linear-gradient(135deg, #00c6ff, #0072ff);"><i class="fa-solid fa-tower-cell"></i></div>
+          </div>
+          <div class="project-content">
+            <div class="project-company">Tech Mahindra / Reliance Jio</div>
+            <h3 class="project-title">Jiobp MyStation</h3>
+            <p class="project-desc">Reliance Jio partner operations application facilitating fuel & charging station workflow automation, customer order tracking, and field analytics.</p>
+            <div class="project-tech-list">
+              <span class="project-tech-item">Flutter</span>
+              <span class="project-tech-item">GetX</span>
+              <span class="project-tech-item">Firebase</span>
+              <span class="project-tech-item">MVC</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-link open-modal" data-project="jiobp">View Architecture Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Architecture Visualizer -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="architecture-box">
+        <span class="badge" style="margin-bottom: 12px;"><i class="fa-solid fa-sitemap"></i> Architectural Principle</span>
+        <h2 class="section-title" style="text-align: left;">Clean Architecture + <span class="flutter-text">MVVM Methodology</span></h2>
+        <p style="color: var(--text-muted); max-width: 750px; margin-bottom: 30px;">
+          I strictly enforce modular separation of concerns in all enterprise Flutter applications to ensure maximum testability, maintainability, and rapid developer onboarding.
+        </p>
+
+        <div class="arch-layers">
+          <div class="arch-layer arch-1">
+            <div class="arch-icon"><i class="fa-solid fa-desktop"></i></div>
+            <h4>UI Presentation Layer</h4>
+            <p>Widgets, Screens, Pages, Micro-animations, responsive layout builders.</p>
+          </div>
+
+          <div class="arch-layer arch-2">
+            <div class="arch-icon"><i class="fa-solid fa-sliders"></i></div>
+            <h4>State & ViewModel</h4>
+            <p>Riverpod / BLoC state providers managing immutable state transitions.</p>
+          </div>
+
+          <div class="arch-layer arch-3">
+            <div class="arch-icon"><i class="fa-solid fa-gear"></i></div>
+            <h4>Domain & Use Cases</h4>
+            <p>Pure Dart business logic, entity definitions, validation rules, contracts.</p>
+          </div>
+
+          <div class="arch-layer arch-4">
+            <div class="arch-icon"><i class="fa-solid fa-database"></i></div>
+            <h4>Data Repository</h4>
+            <p>Remote WebSockets, REST/GraphQL APIs, SQLite, Hive local storage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Timeline -->
+  <section class="section" id="experience">
+    <div class="container">
+      <span class="badge" style="margin: 0 auto 12px auto; display: table;"><i class="fa-solid fa-timeline"></i> Career Journey</span>
+      <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+      <p class="section-subtitle">Over 9 years of software engineering leadership in Flutter, Android SDK, and Cross-Platform applications.</p>
+
+      <div class="timeline">
+        <!-- Role 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <div class="company-name">Orangebits Software Technologies (India) Pvt Ltd</div>
+                <div class="role-title">Senior Flutter Developer – Web, Android & iOS</div>
+              </div>
+              <div class="timeline-date">Oct 2024 – Present</div>
+            </div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</div>
+            <ul class="timeline-bullets">
+              <li>Led hands-on Flutter development across Android, iOS, and Web, owning core feature design, implementation, and performance optimization for multiple client-facing products.</li>
+              <li>Delivered enterprise-grade mobile solutions for <strong>ICICI Bank US</strong>, implementing secure financial workflows, API-driven banking features, and compliant UI/UX to banking security standards.</li>
+              <li>Designed and developed <strong>MoneyMic US</strong> — a copy trading platform — for Web and Mobile, enabling real-time trade replication, expert trader discovery, and portfolio tracking with low-latency updates.</li>
+              <li>Implemented <strong>real-time market data streaming</strong> and trade execution flows using WebSockets and MQTT, achieving sub-second latency for live financial data.</li>
+              <li>Integrated Razorpay, UPI, and Google Pay payment gateways for secure deposit, withdrawal, and transaction processing with full compliance and error handling.</li>
+              <li>Enforced Clean Architecture and MVVM across the codebase, improving maintainability, testability, and engineer onboarding speed.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <div class="company-name">Fibit Infotech Pvt. Ltd.</div>
+                <div class="role-title">Senior Flutter Developer – Android & iOS</div>
+              </div>
+              <div class="timeline-date">Jul 2023 – Oct 2024</div>
+            </div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</div>
+            <ul class="timeline-bullets">
+              <li>Led feature development and architecture decisions for scalable Flutter apps, driving measurable improvements in performance, scalability, and user experience.</li>
+              <li>Developed and optimized trading features including live market data streaming, order management systems, and real-time push notifications for high-frequency workflows.</li>
+              <li>Integrated Razorpay, UPI, and Google Pay for seamless, secure end-to-end payment processing.</li>
+              <li>Applied Clean Architecture and MVVM, establishing a modular codebase that improved code reuse and reduced feature development cycles.</li>
+              <li>Conducted structured code reviews and mentored team members on Dart best practices, state management, and architectural standards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <div class="company-name">Tech Mahindra Ltd. (Client: Reliance Jio)</div>
+                <div class="role-title">Flutter Developer – Android & iOS</div>
+              </div>
+              <div class="timeline-date">Feb 2022 – Jun 2023</div>
+            </div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Mumbai, Maharashtra, India</div>
+            <ul class="timeline-bullets">
+              <li>Built and maintained Flutter apps for Reliance Jio (Jiobp MyStation), delivering complex UI/UX components, asynchronous workflows, and robust state management.</li>
+              <li>Integrated backend services and third-party APIs for reliable data flow and secure cross-platform authentication.</li>
+              <li>Implemented Clean Architecture and performed performance profiling, resolving rendering bottlenecks and improving app responsiveness for enterprise-scale usage.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <div class="company-name">Portall Infosystems Pvt. Ltd. (J.M. Baxi Group)</div>
+                <div class="role-title">Flutter Developer – Android & iOS</div>
+              </div>
+              <div class="timeline-date">Sep 2019 – Feb 2022</div>
+            </div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Mumbai, Maharashtra, India</div>
+            <ul class="timeline-bullets">
+              <li>Owned end-to-end mobile app development for logistics and shipping applications, managing the full lifecycle from architecture to production deployment.</li>
+              <li>Built offline-first capabilities with SQLite and background sync, enabling field agents to operate in low-connectivity environments reliably.</li>
+              <li>Integrated APIs for authentication, real-time tracking, and logistics workflow automation, improving operational efficiency for 500+ daily active users.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 5 & 6 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <div class="company-name">Chromatic Infosystems & Arigel Software</div>
+                <div class="role-title">Android Developer</div>
+              </div>
+              <div class="timeline-date">May 2016 – Jul 2019</div>
+            </div>
+            <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Navi Mumbai, Maharashtra, India</div>
+            <ul class="timeline-bullets">
+              <li>Designed and maintained Android applications using Java and Android SDK, building strong foundational expertise in native mobile engineering.</li>
+              <li>Integrated RESTful APIs, third-party SDKs, authentication flows, and automated push notifications.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications Duo -->
+  <section class="section" style="background: rgba(18, 24, 38, 0.3);">
+    <div class="container duo-grid">
+      <div>
+        <h3 style="font-size: 1.6rem; margin-bottom: 24px;"><i class="fa-solid fa-certificate" style="color: var(--accent-cyan); margin-right: 10px;"></i> Certifications</h3>
+        <div class="info-card-list">
+          <div class="info-item-card">
+            <div class="info-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="info-details">
+              <h4>Generative AI: Introduction & Prompt Engineering</h4>
+              <p>IBM Authorized Certification</p>
+            </div>
+          </div>
+
+          <div class="info-item-card">
+            <div class="info-icon"><i class="fa-brands fa-flutter"></i></div>
+            <div class="info-details">
+              <h4>Flutter & Dart: Developing iOS, Android & Mobile Apps</h4>
+              <p>IBM Professional Certification</p>
+            </div>
+          </div>
+
+          <div class="info-item-card">
+            <div class="info-icon"><i class="fa-brands fa-android"></i></div>
+            <div class="info-details">
+              <h4>Android Development Specialist</h4>
+              <p>Codekul Institution, Pune</p>
+            </div>
+          </div>
+
+          <div class="info-item-card">
+            <div class="info-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="info-details">
+              <h4>Introduction to Scrum Master Profession</h4>
+              <p>SkillUp Certified</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size: 1.6rem; margin-bottom: 24px;"><i class="fa-solid fa-graduation-cap" style="color: var(--accent-emerald); margin-right: 10px;"></i> Education</h3>
+        <div class="info-card-list">
+          <div class="info-item-card">
+            <div class="info-icon" style="color: var(--accent-emerald); background: rgba(0,245,160,0.1);"><i class="fa-solid fa-university"></i></div>
+            <div class="info-details">
+              <h4>Bachelor of Engineering (B.E.) – Electronics Engineering</h4>
+              <p>Priyadarshini College of Engineering, Nagpur University (2011 – 2015)</p>
+              <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">Nagpur, Maharashtra, India</p>
+            </div>
+          </div>
+
+          <div class="info-item-card" style="border-color: var(--border-glow);">
+            <div class="info-icon" style="color: var(--accent-amber); background: rgba(255,183,3,0.1);"><i class="fa-solid fa-trophy"></i></div>
+            <div class="info-details">
+              <h4>7+ Apps Shipped on Play Store & App Store</h4>
+              <p>Proven track record of deploying production apps with CI/CD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <span class="badge" style="margin-bottom: 16px;"><i class="fa-solid fa-handshake"></i> Let's Collaborate</span>
+        <h2 style="font-size: 2.8rem; margin-bottom: 16px;">Ready to Build Your Next <span class="gradient-text">Flutter Project?</span></h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px auto; font-size: 1.05rem;">
+          Whether you need a scalable Fintech trading app, an enterprise mobile architecture, or technical leadership, I am available for opportunities.
+        </p>
+
+        <div class="contact-methods">
+          <div class="contact-pill" onclick="copyToClipboard('sujitmore21@gmail.com', 'Email')" style="cursor: pointer;">
+            <i class="fa-solid fa-envelope" style="color: var(--accent-cyan);"></i> sujitmore21@gmail.com
+          </div>
+          <div class="contact-pill" onclick="copyToClipboard('+917972671159', 'Phone')" style="cursor: pointer;">
+            <i class="fa-solid fa-phone" style="color: var(--accent-emerald);"></i> +91-7972671159
+          </div>
+          <div class="contact-pill">
+            <i class="fa-solid fa-location-dot" style="color: var(--accent-amber);"></i> Pune, Maharashtra, India
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/sujitmore21" target="_blank" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/sujitmore21" target="_blank" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:sujitmore21@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Sujit More. Published at <a href="https://Sujitmore.github.io" style="color: var(--accent-cyan);">Sujitmore.github.io</a></p>
+    </div>
+  </footer>
+
+  <!-- Modal Dialog for Project Details -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3 id="modalTitle" style="font-size: 1.6rem; margin-bottom: 14px;">Project Title</h3>
+      <div id="modalBody">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
