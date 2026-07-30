@@ -20,4 +20,4 @@ git commit -m "$COMMIT_MSG"
 echo "📡 Pushing to remote GitHub repository (main branch)..."
 git push -u origin main
 
-echo "✅ Push completed! Check your deployment on https://Sujitmore.github.io/"
+echo "✅ Push completed! Check your deployment on https://sujitmore21.github.io/"
