@@ -1,10 +1,7 @@
 /**
- * Theme Toggle Module
+ * Theme Toggle Module with Global Event Delegation
  */
 export function initThemeToggle() {
-  const themeBtn = document.getElementById('themeToggle');
-  
-  // Enforce dark mode as primary default
   let currentTheme = localStorage.getItem('theme');
   if (!currentTheme || (currentTheme !== 'dark' && currentTheme !== 'light')) {
     currentTheme = 'dark';
@@ -12,13 +9,16 @@ export function initThemeToggle() {
 
   setTheme(currentTheme);
 
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      const activeTheme = document.documentElement.getAttribute('data-theme');
+  // Global click event delegation for themeToggle button
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('#themeToggle');
+    if (btn) {
+      e.preventDefault();
+      const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
       const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
       setTheme(nextTheme);
-    });
-  }
+    }
+  });
 }
 
 export function setTheme(theme) {
