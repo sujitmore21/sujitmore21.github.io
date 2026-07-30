@@ -1,0 +1,195 @@
+/**
+ * Hero Component
+ */
+export function renderHero() {
+  return `
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Left Column: Hero Text & CTAs -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Profile Avatar & Availability Badge -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-cyan-400/80 shadow-glow-cyan transition-all duration-300 hover:scale-105 hover:border-cyan-300">
+              <img src="assets/images/profile.png" alt="Sujit More Profile" class="w-full h-full object-cover">
+            </div>
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/80 shadow-md">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <span class="text-xs sm:text-sm font-semibold tracking-wide text-slate-300">
+                <i class="fa-solid fa-code-branch text-cyan-400 mr-1"></i> Senior Mobile Architect
+              </span>
+            </div>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+            Architecting <br class="hidden sm:inline">
+            <span class="typing-effect text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500" id="typingTarget">
+              Senior Flutter Architect
+            </span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Senior Flutter Engineer with <strong class="text-white font-semibold">9+ years of software engineering experience</strong> (6+ Flutter, 3 Android). Specializing in <strong class="text-cyan-400 font-semibold">Fintech, Real-Time Copy Trading, Enterprise Banking (ICICI Bank US)</strong>, Clean Architecture, MVVM, and low-latency WebSockets & MQTT systems.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 shadow-glow-cyan transition-all duration-300 hover:scale-105 hover:shadow-cyan-400/50 flex items-center gap-2">
+              <i class="fa-solid fa-rocket"></i> View Featured Projects
+            </a>
+            <a href="https://github.com/sujitmore21" target="_blank" class="px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-slate-200 bg-slate-800/90 border border-slate-700/80 transition-all duration-300 hover:scale-105 hover:border-cyan-400/60 hover:text-white flex items-center gap-2">
+              <i class="fa-brands fa-github text-lg"></i> GitHub Profile
+            </a>
+            <button onclick="copyToClipboard('sujitmore21@gmail.com', 'Email')" class="px-5 py-3.5 rounded-xl font-medium text-xs sm:text-sm text-slate-300 bg-slate-900/80 border border-slate-800 transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-cyan-400"></i> sujitmore21@gmail.com
+            </button>
+          </div>
+
+          <!-- Stats Counter Row -->
+          <div class="hero-stats grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80">
+            <div class="p-4 rounded-2xl glass-card text-center transition-all duration-300 hover:scale-105 hover:shadow-glow-cyan hover:border-cyan-400/40">
+              <div class="stat-number text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono" data-count="9" data-suffix="+">9+</div>
+              <div class="text-xs text-slate-400 font-medium mt-1">Years Experience</div>
+            </div>
+            <div class="p-4 rounded-2xl glass-card text-center transition-all duration-300 hover:scale-105 hover:shadow-glow-purple hover:border-purple-400/40">
+              <div class="stat-number text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono" data-count="25" data-suffix="+">25+</div>
+              <div class="text-xs text-slate-400 font-medium mt-1">Apps Delivered</div>
+            </div>
+            <div class="p-4 rounded-2xl glass-card text-center transition-all duration-300 hover:scale-105 hover:shadow-glow-emerald hover:border-emerald-400/40">
+              <div class="stat-number text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono" data-count="150" data-suffix="k+">150k+</div>
+              <div class="text-xs text-slate-400 font-medium mt-1">Active Users</div>
+            </div>
+            <div class="p-4 rounded-2xl glass-card text-center transition-all duration-300 hover:scale-105 hover:shadow-glow-cyan hover:border-cyan-400/40">
+              <div class="stat-number text-2xl sm:text-3xl font-extrabold text-cyan-300 font-mono" data-count="99" data-suffix=".9%">99.9%</div>
+              <div class="text-xs text-slate-400 font-medium mt-1">Crash-Free Rate</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Simulated Trading Ticker & Visual Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none glass-card p-6 sm:p-8 rounded-3xl border border-slate-700/60 shadow-2xl transition-all duration-300 hover:shadow-glow-cyan hover:border-cyan-400/40">
+
+            <!-- Card Header -->
+            <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-chart-line text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Real-Time Data Engine</h3>
+                  <p class="text-xs text-slate-400 font-mono">WebSocket & MQTT Pipeline</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> LIVE
+              </span>
+            </div>
+
+            <!-- Ticker Data Items -->
+            <div class="space-y-4 font-mono">
+              <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between transition-all duration-300 hover:scale-[1.02] hover:border-cyan-400/40">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                    <i class="fa-brands fa-bitcoin text-lg"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-white text-sm">BTC / USDT</span>
+                    <p class="text-xs text-slate-400">MoneyMic Copy Trader</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div id="btcPrice" class="font-bold text-base text-emerald-400 transition-colors duration-300">$64,250.50</div>
+                  <span class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-caret-up mr-0.5"></i>+2.45%</span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between transition-all duration-300 hover:scale-[1.02] hover:border-purple-400/40">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold">
+                    <i class="fa-brands fa-ethereum text-lg"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-white text-sm">ETH / USDT</span>
+                    <p class="text-xs text-slate-400">BitProEX Derivatives</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div id="ethPrice" class="font-bold text-base text-emerald-400 transition-colors duration-300">$3,480.20</div>
+                  <span class="text-xs text-emerald-400 font-semibold"><i class="fa-solid fa-caret-up mr-0.5"></i>+3.12%</span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between transition-all duration-300 hover:scale-[1.02] hover:border-blue-400/40">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-building-columns text-sm"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-white text-sm">ICICI Bank US</span>
+                    <p class="text-xs text-slate-400">Clean Arch + AES Encr</p>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span class="px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-semibold">Zero Crashing</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Badge -->
+            <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-cyan-400"></i> Enterprise Security</span>
+              <span class="font-mono text-cyan-300">Sub-100ms Latency</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  `;
+}
+
+export function initHeroTypingEffect() {
+  const words = ['Senior Flutter Architect', 'Cross-Platform Specialist', 'Fintech & Trading Expert', 'Mobile Tech Lead'];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const target = document.getElementById('typingTarget');
+  if (!target) return;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+      target.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      target.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 35 : 75;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+      typeSpeed = 2200;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typeSpeed = 450;
+    }
+
+    setTimeout(type, typeSpeed);
+  }
+
+  type();
+}
