@@ -19,11 +19,13 @@ Official Personal Portfolio Website for **Sujit More** — Senior Flutter Engine
 - **Interactive Skills Matrix**: Filterable tabs by domain (Languages, Flutter Frameworks, State Management, Clean Architecture, Real-Time & Backend, DevOps, Payments).
 - **Featured Projects Showcase**:
   - **MoneyMic US** (Real-Time Copy Trading Platform)
-  - **ICICI Bank US** (Enterprise Digital Banking Application)
+  - **ICICI Bank US** (Digital Banking Application)
   - **BitProEX** (Crypto Derivatives Trading Platform)
-  - **Rampwiz Gateway** (Fiat-to-Crypto Payment Gateway)
-  - **Diabos Global Shipping** (Logistics & Offline-First SQLite Platform)
-  - **Jiobp MyStation** (Reliance Jio Partner Operations App)
+  - **Rampwiz** (Fiat-to-Crypto Payment Gateway)
+  - **CoinCRED Pro** (Global Crypto Exchange)
+  - **Diabos** (Logistics & Offline-First SQLite Platform — [Play Store](https://play.google.com/store/apps/details?id=com.diabos.globalfze&hl=en_IN) | [App Store](https://apps.apple.com/us/app/diabos-3-0/id6472989764))
+  - **Jiobp My-Station** (Reliance Jio-bp Partner Operations App — [Play Store](https://play.google.com/store/apps/details?id=com.jiobp.my_station&hl=en_IN) | [App Store](https://apps.apple.com/in/app/jiobp-my-station/id6450923655))
+  - **Food Monster Vegan** (Plant-Based Culinary Platform — [App Store](https://apps.apple.com/us/app/food-monster-vegan-recipes/id1052988561))
 - **Clean Architecture + MVVM Visualizer**: Detailed breakdown of UI Presentation, State & ViewModel, Business Use Cases, and Data Repositories.
 - **Interactive Project Modals**: Complete technical architecture drawers for each project.
 - **Light/Dark Mode Switcher**: Instant theme toggling.

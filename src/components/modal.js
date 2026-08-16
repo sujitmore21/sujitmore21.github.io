@@ -54,13 +54,14 @@ export function initModalEvents() {
       ]
     },
     'icici': {
-      title: 'ICICI Bank US — Digital Banking Platform',
-      tech: 'Flutter, MVVM, Clean Architecture, AES Data Encryption, REST APIs',
+      title: 'ICICI Bank US – Digital Banking Application',
+      tech: 'Flutter, Clean Architecture, MVVM, Google Maps SDK, AES-256 Data Encryption, REST APIs',
       highlights: [
-        'Enterprise banking solution for US market adhering to strict banking security standards.',
-        'Clean Architecture + MVVM modular structure for scalability, zero crash rates, and unit testability.',
-        'Account management, secure transfers, transaction histories, and PDF statement generation.',
-        'Biometric authentication & encrypted local storage.'
+        'Enterprise mobile application (iUniverse) engineered for ICICI Bank for candidate lifecycle management.',
+        'Engineered dynamic candidate journey timelines covering application, interview stages, offer letter generation, and asset allocation.',
+        'Integrated Google Maps SDK for interactive geo-tagged job discovery across major metropolitan zones throughout India.',
+        'Implemented enterprise-grade AES-256 encryption for candidate data security, documents, and banking compliance.',
+        'Clean Architecture + MVVM separation of concerns resulting in zero crash rates and streamlined code testability.'
       ]
     },
     'bitproex': {
@@ -73,30 +74,60 @@ export function initModalEvents() {
       ]
     },
     'rampwiz': {
-      title: 'Rampwiz — Fiat-to-Crypto Payment Gateway',
-      tech: 'Flutter, BLoC, Firebase, RESTful APIs, Razorpay, Clean Architecture',
+      title: 'Rampwiz – Fiat-to-Crypto Payment Gateway',
+      tech: 'Flutter, Firebase, BLoC, Clean Architecture, Automated KYC, REST APIs',
       highlights: [
-        'Fiat-to-Crypto gateway integrating automated KYC compliance verification.',
-        'Seamless integration with fiat payment rails (UPI, NetBanking, Cards, Razorpay).',
-        'Secure wallet management & transaction audit trails.'
+        'Built a fiat-to-crypto payment gateway at Fibitpro incorporating automated KYC verification routines, compliance workflows, and multi-currency fiat payment channels via BLoC.',
+        'Architected clean layered domain boundaries with isolated data sources, repositories, and state blocs.',
+        'Integrated secure payment rails (Apple Pay, Credit/Debit Cards, Wire Transfers) with zero-slippage rate locking.',
+        'Implemented real-time biometric document scanning and AML compliance verification.'
+      ]
+    },
+    'coincred': {
+      title: 'CoinCRED Pro – Global Crypto Exchange',
+      tech: 'Flutter, Firebase, Provider, MVVM, WebSockets, REST APIs',
+      highlights: [
+        'Delivered a multi-platform crypto exchange app at Fibitpro featuring KYC workflows, wallet balance tracking, and secure trading services.',
+        'Engineered real-time order books, interactive charts, and live ticker simulations over low-latency WebSockets.',
+        'Built comprehensive wallet infrastructure for instant crypto deposits, withdrawals, and internal transfers.',
+        'Successfully deployed and maintained on both Google Play Store and Apple App Store.'
       ]
     },
     'diabos': {
-      title: 'Diabos — Global Shipping & Disbursement Platform',
-      tech: 'Flutter, SQLite, GetX, MVVM, Background Sync',
+      title: 'Diabos',
+      tech: 'Flutter, SQLite, GetX, Clean Architecture, REST APIs, Background Sync',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.diabos.globalfze&hl=en_IN',
+      appStoreUrl: 'https://apps.apple.com/us/app/diabos-3-0/id6472989764',
       highlights: [
-        'Offline-first capabilities with SQLite for maritime agents in low-connectivity environments.',
-        'Disbursement accounting, port cost estimation, and towage contract tracking.',
+        'Offline-first capabilities with SQLite for maritime port agents in low-connectivity environments.',
+        'Disbursement accounting, port cost estimation (DA Estimator), and towage contract tracking.',
+        'Vessel tracking, PDA/APDA/RFQ/AF approval workflows, and interactive agent support.',
         'Active usage by 500+ daily active logistics operators globally.'
       ]
     },
     'jiobp': {
-      title: 'Jiobp MyStation — Reliance Jio Partner App',
-      tech: 'Flutter, GetX, MVC, Firebase, REST APIs',
+      title: 'Jiobp My-Station — Reliance Jio-bp Partner App',
+      tech: 'Flutter, GetX, Clean Architecture, SQLite, Firebase, REST APIs',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.jiobp.my_station&hl=en_IN',
+      appStoreUrl: 'https://apps.apple.com/in/app/jiobp-my-station/id6450923655',
       highlights: [
-        'Operations app for Reliance Jio channel partners across India.',
-        'Station workflow management, inventory tracking, and sales analytics.',
-        'Deployed cross-platform on Android & iOS.'
+        'Flagship enterprise mobility app for Reliance BP Mobility Limited (Jio-bp) mobility stations across India.',
+        'Engineered station operations workflows including fuel volume reconciliations, dispenser readings, and shift handover settlements.',
+        'Implemented real-time sales reporting, tank inventory telemetry, dynamic pricing sync, and digital billing receipt generation.',
+        'Optimized offline-first data caching and resilient background sync for remote highway stations with spotty connectivity.',
+        'Published and maintained on both Google Play Store and Apple App Store with continuous production releases.'
+      ]
+    },
+    'foodmonster': {
+      title: 'Food Monster — Plant-Based & Vegan Recipes Platform',
+      tech: 'Flutter, iOS, Clean Architecture, StoreKit / In-App Purchases, Firebase, OAuth Social Auth',
+      appStoreUrl: 'https://apps.apple.com/us/app/food-monster-vegan-recipes/id1052988561',
+      highlights: [
+        'Top-rated culinary application by One Green Planet featuring 20,000+ plant-based, vegan, and dairy-free recipes.',
+        'Engineered seamless multi-tier In-App Purchase (IAP) subscriptions (monthly, bi-annual, annual) with StoreKit and receipt validation.',
+        'Implemented OAuth 2.0 social sign-in (Apple Sign-In, Google, Facebook, Email).',
+        'Engineered high-performance categorical recipe discovery, dietary filter algorithms, bookmarking, and offline recipe caching.',
+        'Published and maintained on Apple App Store with high active subscriber retention.'
       ]
     }
   };
@@ -110,10 +141,29 @@ export function initModalEvents() {
       if (details && modalOverlay) {
         if (modalTitle) modalTitle.textContent = details.title;
         if (modalBody) {
+          let storeLinksHtml = '';
+          if (details.playStoreUrl || details.appStoreUrl) {
+            storeLinksHtml = `
+              <div class="flex flex-wrap gap-2.5 pt-1 mb-4">
+                ${details.playStoreUrl ? `
+                  <a href="${details.playStoreUrl}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/30 hover:text-white font-mono text-xs font-semibold flex items-center gap-1.5 transition-all duration-300 hover:scale-105">
+                    <i class="fa-brands fa-google-play text-emerald-400"></i> Google Play Store
+                  </a>
+                ` : ''}
+                ${details.appStoreUrl ? `
+                  <a href="${details.appStoreUrl}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500/30 hover:text-white font-mono text-xs font-semibold flex items-center gap-1.5 transition-all duration-300 hover:scale-105">
+                    <i class="fa-brands fa-apple text-cyan-400"></i> Apple App Store
+                  </a>
+                ` : ''}
+              </div>
+            `;
+          }
+
           modalBody.innerHTML = `
             <div class="p-3 rounded-xl bg-slate-900/90 font-mono text-xs text-cyan-400 border border-slate-800 mb-4">
               <strong>Tech Stack:</strong> ${details.tech}
             </div>
+            ${storeLinksHtml}
             <h4 class="font-bold text-white text-sm mb-2">Key Technical Deliverables:</h4>
             <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside leading-relaxed">
               ${details.highlights.map(h => `<li>${h}</li>`).join('')}
