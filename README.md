@@ -26,6 +26,7 @@ Official Personal Portfolio Website for **Sujit More** — Senior Flutter Engine
   - **Diabos** (Logistics & Offline-First SQLite Platform — [Play Store](https://play.google.com/store/apps/details?id=com.diabos.globalfze&hl=en_IN) | [App Store](https://apps.apple.com/us/app/diabos-3-0/id6472989764))
   - **Jiobp My-Station** (Reliance Jio-bp Partner Operations App — [Play Store](https://play.google.com/store/apps/details?id=com.jiobp.my_station&hl=en_IN) | [App Store](https://apps.apple.com/in/app/jiobp-my-station/id6450923655))
   - **jio-bp pulse Charge Pro** (Reliance Jio-bp EV Charging Companion — [Play Store](https://play.google.com/store/apps/details?id=com.jiobp.pulse_charge&hl=en_IN) | [App Store](https://apps.apple.com/us/app/bp-pulse-ev-charging/id6448033048))
+  - **Jio Bp MyField** (Reliance Jio-bp Field Inspection & Asset Audit Platform — [Play Store](https://play.google.com/store/apps/details?id=com.jiobp.pvasset&hl=en_IN) | [App Store](https://apps.apple.com/us/app/jiobp-myfield/id6473767546))
   - **Food Monster Vegan** (Plant-Based Culinary Platform — [App Store](https://apps.apple.com/us/app/food-monster-vegan-recipes/id1052988561))
 - **Clean Architecture + MVVM Visualizer**: Detailed breakdown of UI Presentation, State & ViewModel, Business Use Cases, and Data Repositories.
 - **Interactive Project Modals**: Complete technical architecture drawers for each project.

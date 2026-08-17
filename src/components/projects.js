@@ -380,7 +380,59 @@ export function renderProjects() {
           </div>
         </div>
 
-        <!-- 7. Food Monster Vegan Recipes -->
+        <!-- 7. Jio Bp MyField -->
+        <div class="project-card group glass-card rounded-3xl p-6 border border-slate-700/60 flex flex-col justify-between transition-all duration-300 hover:scale-[1.01] hover:shadow-glow-emerald hover:border-emerald-400/40" data-category="enterprise logistics">
+          <div>
+            <!-- Mobile Multi-Screen Showcase Image -->
+            <div class="relative w-full h-52 sm:h-64 rounded-2xl overflow-hidden mb-5 border border-slate-800 shadow-xl group-hover:border-emerald-400/50 transition-all duration-300">
+              <img src="assets/images/jiobp_myfield_mockup.png?v=3.0" alt="Jio Bp MyField Mobile App Screens" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-emerald-600/90 text-white font-mono text-xs font-bold shadow-md">
+                  <i class="fa-solid fa-clipboard-check mr-1"></i> Asset Audit & PV
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-950/80 text-emerald-300 font-mono text-xs font-semibold backdrop-blur-md">
+                  <i class="fa-solid fa-cloud-arrow-down mr-1"></i> Live on Stores
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-xs font-semibold">Audit & Compliance</span>
+              <span class="text-xs text-slate-400 font-mono">Reliance Jio-bp</span>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-2">Jio Bp MyField</h3>
+            <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+              Enterprise field inspection, physical asset verification (PV Asset), and statutory safety compliance mobile platform for Reliance BP Mobility Limited (Jio-bp) across nationwide retail mobility stations.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs font-mono text-emerald-400">Flutter</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs font-mono text-emerald-400">Clean Arch</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs font-mono text-emerald-400">SQLite Offline</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs font-mono text-emerald-400">GetX</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs font-mono text-emerald-400">Camera & OCR</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 text-xs font-mono text-emerald-400">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 mt-auto">
+            <!-- App Store & Play Store Links -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <a href="https://play.google.com/store/apps/details?id=com.jiobp.pvasset&hl=en_IN" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-emerald-400/60 hover:bg-emerald-500/10 text-slate-300 hover:text-white font-mono text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fa-brands fa-google-play text-emerald-400 text-sm"></i> Play Store
+              </a>
+              <a href="https://apps.apple.com/us/app/jiobp-myfield/id6473767546" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400/60 hover:bg-cyan-500/10 text-slate-300 hover:text-white font-mono text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fa-brands fa-apple text-cyan-400 text-sm"></i> App Store
+              </a>
+            </div>
+
+            <button class="open-modal w-full py-3.5 rounded-xl bg-slate-800/90 border border-slate-700 font-semibold text-xs sm:text-sm text-slate-200 transition-all duration-300 hover:bg-emerald-500/20 hover:border-emerald-400 hover:text-white flex items-center justify-center gap-2" data-project="jiobp_myfield">
+              <i class="fa-solid fa-code"></i> View Architecture & Specs <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Food Monster Vegan Recipes -->
         <div class="project-card group glass-card rounded-3xl p-6 border border-slate-700/60 flex flex-col justify-between transition-all duration-300 hover:scale-[1.01] hover:shadow-glow-pink hover:border-pink-400/40" data-category="lifestyle">
           <div>
             <!-- Mobile Multi-Screen Showcase Image -->

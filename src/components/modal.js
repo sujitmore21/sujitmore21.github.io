@@ -131,6 +131,19 @@ export function initModalEvents() {
         'Live and actively serving EV drivers on both Google Play Store and Apple App Store.'
       ]
     },
+    'jiobp_myfield': {
+      title: 'Jio Bp MyField',
+      tech: 'Flutter, GetX, Clean Architecture, SQLite Offline, Camera & Image Compression, REST APIs',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.jiobp.pvasset&hl=en_IN',
+      appStoreUrl: 'https://apps.apple.com/us/app/jiobp-myfield/id6473767546',
+      highlights: [
+        'Enterprise field asset verification (PV Asset) and site audit mobile platform for Reliance BP Mobility Limited (Jio-bp).',
+        'Engineered dynamic audit modules including PV Assets, ASR Audit, L3/L2 HOTO handover checklists, and internal compliance verifications.',
+        'Implemented offline-first SQLite database layer allowing field engineers to perform dispenser safety checks, equipment diagnostics, and photo evidence uploads in low-connectivity areas.',
+        'Integrated role-based enterprise access (Head Office, Regional Officers, Field Auditors) with location code search across nationwide mobility stations.',
+        'Published and maintained on both Google Play Store and Apple App Store.'
+      ]
+    },
     'foodmonster': {
       title: 'Food Monster — Plant-Based & Vegan Recipes Platform',
       tech: 'Flutter, iOS, Clean Architecture, StoreKit / In-App Purchases, Firebase, OAuth Social Auth',
