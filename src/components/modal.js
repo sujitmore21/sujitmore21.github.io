@@ -118,6 +118,19 @@ export function initModalEvents() {
         'Published and maintained on both Google Play Store and Apple App Store with continuous production releases.'
       ]
     },
+    'jiobp_pulse': {
+      title: 'jio-bp pulse Charge Pro',
+      tech: 'Flutter, Google Maps SDK, GetX, Clean Architecture, REST APIs, IoT / MQTT, Payment Gateway',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.jiobp.pulse_charge&hl=en_IN',
+      appStoreUrl: 'https://apps.apple.com/us/app/bp-pulse-ev-charging/id6448033048',
+      highlights: [
+        'Consumer & Fleet EV charging companion application engineered for Reliance BP Mobility Limited (Jio-bp pulse) across India.',
+        'Integrated Google Maps SDK with custom live station cluster markers, real-time connector availability rings, and turn-by-turn routing.',
+        'Engineered dynamic connector filtering for multiple charging standards (Fast: CCS, Type 2, GBT, CHAdeMO) with live power ratings (7kW - 60kW+).',
+        'Implemented end-to-end charging session management: live tariff calculations (₹/kWh), slot reservation, remote session start/stop, and digital wallet checkout.',
+        'Live and actively serving EV drivers on both Google Play Store and Apple App Store.'
+      ]
+    },
     'foodmonster': {
       title: 'Food Monster — Plant-Based & Vegan Recipes Platform',
       tech: 'Flutter, iOS, Clean Architecture, StoreKit / In-App Purchases, Firebase, OAuth Social Auth',
