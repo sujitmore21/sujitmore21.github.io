@@ -144,6 +144,17 @@ export function initModalEvents() {
         'Published and maintained on both Google Play Store and Apple App Store.'
       ]
     },
+    'pcs1x': {
+      title: 'PCS 1x — Indian Ports Association (Maritime Port Community System)',
+      tech: 'Flutter, Dart, Clean Architecture, REST APIs, Microservices, SQLite Offline, Enterprise Security, Role-Based Access Control',
+      highlights: [
+        'Spearheaded the PCS 1x platform for the Indian Ports Association under the Ministry of Shipping, Government of India.',
+        'Enhanced operational efficiency and reduced turnaround times across major maritime ports through paperless digital workflows and electronic delivery orders (e-DO).',
+        'Collaborated with cross-functional maritime stakeholders (Port Authorities, Customs Agents, Shipping Lines, Terminal Operators) to foster growth and establish operational best practices.',
+        'Implemented strategic, secure, and scalable solutions aligned with the association\'s long-term vision and modernization roadmap since its inception in 1966.',
+        'Architected real-time vessel tracking, berth allocation management, and cargo movement analytics with offline-resilient local sync.'
+      ]
+    },
     'foodmonster': {
       title: 'Food Monster — Plant-Based & Vegan Recipes Platform',
       tech: 'Flutter, iOS, Clean Architecture, StoreKit / In-App Purchases, Firebase, OAuth Social Auth',

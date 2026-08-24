@@ -37,11 +37,11 @@ export function renderExperience() {
             </div>
           </div>
           <ul class="space-y-2.5 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Led hands-on Flutter development across <strong class="text-white">Android, iOS, and Web</strong>, owning core feature design, architecture, and performance optimization for client products.</li>
-            <li>Delivered enterprise-grade mobile solutions for <strong class="text-cyan-300">ICICI Bank US</strong>, implementing secure financial workflows, API-driven banking features, and compliant UI/UX to US banking standards.</li>
+            <li>Led hands-on Flutter development across <strong class="text-white">Android, iOS, and Web</strong>, owning core feature design, architecture, and performance optimization for enterprise products.</li>
+            <li>Architected and delivered <strong class="text-cyan-300">ICICI Bank US – Digital Banking Application</strong>, implementing secure talent onboarding, geo-tagged jobs via Google Maps SDK, and AES-256 encrypted security.</li>
             <li>Designed and developed <strong class="text-cyan-300">MoneyMic US</strong> — a real-time copy trading platform enabling expert trader discovery, sub-second trade replication, and portfolio tracking.</li>
-            <li>Implemented real-time market data streaming using <strong class="text-white">WebSockets, MQTT, and Socket.IO</strong> for sub-second latency financial data.</li>
-            <li>Integrated payment gateways including <strong class="text-white">Razorpay, UPI, and Google Pay</strong> for secure deposits, withdrawals, and transactions.</li>
+            <li>Engineered <strong class="text-cyan-300">Food Monster — Vegan Recipes Platform</strong> for One Green Planet, delivering 20,000+ recipe catalog browsing, StoreKit multi-tier in-app purchases, and social auth.</li>
+            <li>Implemented real-time streaming architectures using <strong class="text-white">WebSockets, MQTT, and Socket.IO</strong> for high-frequency data pipelines.</li>
             <li>Enforced <strong class="text-white">Clean Architecture and MVVM</strong>, improving maintainability, test coverage, and developer onboarding speed.</li>
           </ul>
         </div>
@@ -61,10 +61,10 @@ export function renderExperience() {
             </div>
           </div>
           <ul class="space-y-2.5 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Led feature development and architecture decisions for crypto trading platforms including <strong class="text-purple-300">BitProEX</strong>, <strong class="text-purple-300">Rampwiz Gateway</strong>, and <strong class="text-purple-300">CoinCRED Pro</strong>.</li>
-            <li>Developed live market data streaming, order management systems (spot/futures), and push notification engines for high-frequency workflows.</li>
-            <li>Integrated Razorpay, UPI, and Google Pay for end-to-end payment processing.</li>
-            <li>Applied Clean Architecture and MVVM, conducting structured code reviews and mentoring engineering team members.</li>
+            <li>Led mobile engineering and architecture for major crypto trading platforms: <strong class="text-purple-300">BitProEX Derivatives</strong>, <strong class="text-purple-300">Rampwiz Fiat-to-Crypto Gateway</strong>, and <strong class="text-purple-300">CoinCRED Pro Global Exchange</strong>.</li>
+            <li>Delivered live order book streaming, automated KYC verification routines, multi-currency fiat payment channels, and push notification engines.</li>
+            <li>Integrated payment gateways (Razorpay, UPI, Google Pay) and custom multi-asset crypto wallets.</li>
+            <li>Applied Clean Architecture and MVVM/BLoC, conducting structured code reviews and mentoring engineering team members.</li>
           </ul>
         </div>
 
@@ -73,7 +73,7 @@ export function renderExperience() {
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-800">
             <div>
               <div class="flex items-center gap-3 flex-wrap">
-                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Tech Mahindra Ltd. <span class="text-slate-400 text-base font-normal">(Client: Reliance Jio)</span></h3>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Tech Mahindra Ltd. <span class="text-slate-400 text-base font-normal">(Client: Reliance Jio-bp)</span></h3>
                 <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-xs font-semibold">Feb 2022 – Jun 2023</span>
               </div>
               <p class="text-sm text-emerald-400 font-semibold mt-1">Flutter Developer — Android & iOS</p>
@@ -83,18 +83,20 @@ export function renderExperience() {
             </div>
           </div>
           <ul class="space-y-2.5 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Built and maintained enterprise Flutter applications for <strong class="text-emerald-300">Reliance Jio</strong> (<strong class="text-white">Jiobp MyStation</strong>), delivering station workflow tools and customer operations.</li>
-            <li>Integrated backend microservices and third-party APIs for secure cross-platform authentication and data flow.</li>
-            <li>Implemented Clean Architecture and performed performance profiling, resolving UI rendering bottlenecks for enterprise scale.</li>
+            <li>Architected and delivered flagship enterprise Flutter applications for <strong class="text-emerald-300">Reliance BP Mobility Limited (Jio-bp)</strong>:</li>
+            <li><strong class="text-white">Jiobp My-Station</strong>: Retail station partner operations managing dispenser meter readings, daily inventory telemetry, and shift reconciliation.</li>
+            <li><strong class="text-white">jio-bp pulse Charge Pro</strong>: Consumer & fleet EV charging mobility platform with live map connector status (CCS, Type 2, GBT) and slot booking.</li>
+            <li><strong class="text-white">Jio Bp MyField</strong>: Enterprise field asset verification (PV Asset), dispenser SAFF safety audits, and photo evidence validation.</li>
+            <li>Implemented offline-first SQLite synchronization and GetX state management for high enterprise reliability in low-connectivity zones.</li>
           </ul>
         </div>
 
-        <!-- 4. Portall Infosystems Pvt. Ltd. (J.M. Baxi Group) -->
+        <!-- 4. Portall Infosystems Pvt. Ltd. (J.M. Baxi Group / Indian Ports Association) -->
         <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-700/60 transition-all duration-300 hover:scale-[1.01] hover:shadow-glow-amber hover:border-amber-400/40">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-800">
             <div>
               <div class="flex items-center gap-3 flex-wrap">
-                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Portall Infosystems Pvt. Ltd. <span class="text-slate-400 text-base font-normal">(J.M. Baxi Group)</span></h3>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white">Portall Infosystems Pvt. Ltd. <span class="text-slate-400 text-base font-normal">(Client: Indian Ports Association / J.M. Baxi)</span></h3>
                 <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-mono text-xs font-semibold">Sep 2019 – Feb 2022</span>
               </div>
               <p class="text-sm text-amber-400 font-semibold mt-1">Flutter Developer — Android & iOS</p>
@@ -104,7 +106,9 @@ export function renderExperience() {
             </div>
           </div>
           <ul class="space-y-2.5 text-sm text-slate-300 list-disc list-inside leading-relaxed">
-            <li>Owned end-to-end mobile development for <strong class="text-amber-300">Diabos Global Shipping & Disbursement</strong> platform from architecture to production deployment.</li>
+            <li>Spearheaded the <strong class="text-amber-300">PCS 1x (Port Community System)</strong> project for the <strong class="text-white">Indian Ports Association</strong>, enhancing operational efficiency for major ports under the Ministry of Shipping.</li>
+            <li>Owned end-to-end mobile engineering for <strong class="text-amber-300">Diabos Global Shipping & Disbursement</strong> platform from architecture to production deployment.</li>
+            <li>Collaborated with maritime stakeholders to foster growth initiatives, establishing operational best practices within the major port community.</li>
             <li>Engineered <strong class="text-white">offline-first capabilities with SQLite</strong> and background sync, enabling field port agents to operate seamlessly in low-connectivity environments.</li>
             <li>Automated shipping workflow tracking and disbursement accounting for <strong class="text-white">500+ daily active logistics operators</strong> globally.</li>
           </ul>
