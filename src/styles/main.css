@@ -1,57 +1,76 @@
-/* Main CSS for Sujit More Portfolio */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+/* Main CSS for Sujit More Portfolio - Premium Mobile Product & App Showcase */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* ==========================================================================
-   DARK THEME SYSTEM (DEFAULT)
+   DARK THEME SYSTEM (DEFAULT - OBSIDIAN & TITANIUM)
    ========================================================================== */
 :root,
 [data-theme="dark"] {
   --bg-dark: #060911;
-  --bg-card: rgba(15, 23, 42, 0.85);
-  --bg-card-hover: rgba(30, 41, 59, 0.95);
-  --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-card: rgba(13, 20, 36, 0.82);
+  --bg-card-hover: rgba(22, 32, 54, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.04);
   --border-glass: rgba(255, 255, 255, 0.12);
   --border-glow: rgba(0, 242, 254, 0.4);
 
+  --phone-titanium: #1e293b;
+  --phone-bezel: #090d16;
+  --phone-inner-border: rgba(255, 255, 255, 0.15);
+
   --accent-cyan: #00f2fe;
-  --accent-blue: #4facfe;
-  --accent-purple: #7f53ac;
-  --accent-emerald: #00f5a0;
-  --accent-amber: #ffb703;
-  --accent-pink: #ff007f;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-pink: #ec4899;
 
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
 
-  --gradient-primary: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #7f53ac 100%);
+  --gradient-primary: linear-gradient(135deg, #00f2fe 0%, #3b82f6 50%, #8b5cf6 100%);
   --gradient-flutter: linear-gradient(135deg, #02569B 0%, #0175C2 50%, #13B9F6 100%);
-  --gradient-accent: linear-gradient(135deg, #00f5a0 0%, #00f2fe 100%);
+  --gradient-accent: linear-gradient(135deg, #10b981 0%, #00f2fe 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
 
   color-scheme: dark;
 }
 
 /* ==========================================================================
-   LIGHT THEME SYSTEM
+   LIGHT THEME SYSTEM (ALABASTER & FROSTED GLASS)
    ========================================================================== */
 [data-theme="light"] {
   --bg-dark: #f8fafc;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-card-hover: #ffffff;
   --bg-glass: rgba(0, 0, 0, 0.03);
-  --border-glass: #cbd5e1;
-  --border-glow: rgba(2, 117, 194, 0.4);
+  --border-glass: #e2e8f0;
+  --border-glow: rgba(2, 132, 199, 0.4);
+
+  --phone-titanium: #cbd5e1;
+  --phone-bezel: #0f172a;
+  --phone-inner-border: rgba(0, 0, 0, 0.1);
+
+  --accent-cyan: #0284c7;
+  --accent-blue: #2563eb;
+  --accent-purple: #7c3aed;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+  --accent-pink: #db2777;
 
   --text-main: #0f172a;
   --text-muted: #334155;
   --text-dim: #475569;
+
+  --gradient-primary: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%);
+  --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(241, 245, 249, 0.8) 100%);
 
   color-scheme: light;
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-main);
   overflow-x: hidden;
@@ -62,23 +81,24 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(0, 242, 254, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 85% 65%, rgba(127, 83, 172, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(0, 245, 160, 0.06) 0%, transparent 45%);
+    radial-gradient(circle at 20% 15%, rgba(0, 242, 254, 0.09) 0%, transparent 40%),
+    radial-gradient(circle at 80% 35%, rgba(139, 92, 246, 0.09) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.07) 0%, transparent 45%);
   background-attachment: fixed;
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding-bottom: 70px;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 242, 254, 0.3);
-  border-radius: 5px;
+  background: rgba(0, 242, 254, 0.25);
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-cyan);
@@ -101,221 +121,533 @@ body {
 
 /* Glassmorphism Cards */
 .glass-card {
-  background: var(--bg-card) !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-glass);
   color: var(--text-main);
-}
-
-/* Dark Theme Specific Card Styling */
-[data-theme="dark"] .glass-card {
-  background: rgba(15, 23, 42, 0.85) !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  color: #f8fafc !important;
-  box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.6);
-}
-
-[data-theme="dark"] .glass-card h1,
-[data-theme="dark"] .glass-card h2,
-[data-theme="dark"] .glass-card h3,
-[data-theme="dark"] .glass-card h4,
-[data-theme="dark"] .glass-card p,
-[data-theme="dark"] .glass-card li {
-  color: #f8fafc !important;
-}
-
-[data-theme="dark"] .glass-card p.text-slate-300,
-[data-theme="dark"] .glass-card p.text-slate-400,
-[data-theme="dark"] .glass-card ul li {
-  color: #cbd5e1 !important;
+  box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ==========================================================================
-   LIGHT MODE CONTRAST & LEGIBILITY OVERRIDES
+   SMARTPHONE HARDWARE MOCKUP & SIMULATOR (iPhone 16 Pro / Flagship Mobile)
    ========================================================================== */
-[data-theme="light"] body {
-  background-color: #f8fafc !important;
-  color: #0f172a !important;
-  background-image: 
-    radial-gradient(circle at 15% 15%, rgba(2, 132, 199, 0.06) 0%, transparent 45%),
-    radial-gradient(circle at 85% 65%, rgba(124, 58, 237, 0.06) 0%, transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.05) 0%, transparent 45%);
+.phone-mockup-wrapper {
+  perspective: 1200px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
 }
 
-[data-theme="light"] h1,
-[data-theme="light"] h2,
-[data-theme="light"] h3,
-[data-theme="light"] h4,
-[data-theme="light"] h5,
-[data-theme="light"] h6 {
-  color: #0f172a !important;
+.phone-mockup {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 18.5;
+  background: #090d16;
+  border-radius: 48px;
+  padding: 10px;
+  box-shadow: 
+    0 0 0 2px rgba(255, 255, 255, 0.15),
+    0 0 0 5px #1a2234,
+    0 25px 60px -15px rgba(0, 0, 0, 0.8),
+    0 0 50px -10px rgba(0, 242, 254, 0.35);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
 }
 
-[data-theme="light"] p,
-[data-theme="light"] p.text-slate-300,
-[data-theme="light"] p.text-slate-400,
-[data-theme="light"] .text-slate-300,
-[data-theme="light"] .text-slate-400 {
-  color: #334155 !important;
+.phone-mockup:hover {
+  transform: translateY(-8px) rotateY(-2deg) rotateX(2deg);
+  box-shadow: 
+    0 0 0 2px rgba(0, 242, 254, 0.4),
+    0 0 0 5px #1a2234,
+    0 35px 70px -15px rgba(0, 0, 0, 0.9),
+    0 0 70px 0px rgba(0, 242, 254, 0.5);
 }
 
-[data-theme="light"] .text-slate-200,
-[data-theme="light"] .text-slate-100 {
-  color: #0f172a !important;
+/* Phone Side Buttons */
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 90px;
+  height: 42px;
+  width: 3.5px;
+  background: #334155;
+  border-radius: 3px 0 0 3px;
+  box-shadow: 0 55px 0 #334155, 0 110px 0 #334155;
 }
 
-[data-theme="light"] .text-white {
-  color: #0f172a !important;
+.phone-mockup::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 130px;
+  height: 65px;
+  width: 3.5px;
+  background: #334155;
+  border-radius: 0 3px 3px 0;
 }
 
-[data-theme="light"] strong.text-white {
-  color: #0284c7 !important;
+/* Inner Screen Container */
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #060911;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Light Theme Navbar */
-[data-theme="light"] nav ul {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  border-color: #cbd5e1 !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+/* Glass Screen Glare Reflection */
+.phone-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 60%);
+  pointer-events: none;
+  z-index: 25;
+  border-radius: 40px;
 }
 
-[data-theme="light"] nav ul a {
-  color: #1e293b !important;
-  font-weight: 600 !important;
+/* Dynamic Island */
+.dynamic-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 26px;
+  min-width: 85px;
+  max-width: 88%;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-[data-theme="light"] nav ul a:hover {
-  color: #0284c7 !important;
+.dynamic-island.expanded {
+  height: 36px;
+  min-width: 210px;
+  border-radius: 22px;
+  padding: 0 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(0, 242, 254, 0.4);
 }
 
-[data-theme="light"] #themeToggle,
-[data-theme="light"] #mobileMenuBtn {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-  color: #0f172a !important;
+/* Phone Status Bar */
+.phone-status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 8px 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  z-index: 20;
+  pointer-events: none;
 }
 
-/* Light Theme Cards & Containers */
-[data-theme="light"] .glass-card {
-  background: #ffffff !important;
-  border: 1px solid #cbd5e1 !important;
-  color: #0f172a !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+/* Home Indicator Bar */
+.phone-home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  z-index: 30;
+  backdrop-filter: blur(10px);
 }
 
-[data-theme="light"] .glass-card:hover {
-  border-color: #0284c7 !important;
-  box-shadow: 0 12px 35px rgba(2, 132, 199, 0.15) !important;
+/* Screen App Viewport */
+.phone-app-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-[data-theme="light"] .hero-stats .glass-card {
-  background: #ffffff !important;
-  border-color: #e2e8f0 !important;
+.phone-screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-[data-theme="light"] .hero-stats .text-slate-400 {
-  color: #475569 !important;
-  font-weight: 600 !important;
+/* Floating Mobile OS Widgets */
+.floating-widget {
+  position: absolute;
+  background: rgba(13, 20, 36, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  z-index: 40;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: floatSlow 6s ease-in-out infinite alternate;
 }
 
-/* Light Theme Dark Panels & Tickers */
-[data-theme="light"] .bg-slate-900,
-[data-theme="light"] .bg-slate-900\/80,
-[data-theme="light"] .bg-slate-900\/90,
-[data-theme="light"] .bg-slate-900\/60,
-[data-theme="light"] .bg-slate-950,
-[data-theme="light"] .bg-slate-950\/60,
-[data-theme="light"] .bg-slate-950\/40 {
-  background-color: #f1f5f9 !important;
-  color: #0f172a !important;
-  border-color: #cbd5e1 !important;
+.floating-widget:hover {
+  transform: scale(1.06) translateY(-4px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 20px 45px rgba(0, 242, 254, 0.35);
 }
 
-[data-theme="light"] .bg-slate-800,
-[data-theme="light"] .bg-slate-800\/80,
-[data-theme="light"] .bg-slate-800\/90 {
-  background-color: #ffffff !important;
-  color: #0f172a !important;
-  border-color: #cbd5e1 !important;
+/* ==========================================================================
+   ANIMATED PROFILE AVATAR & HERO STYLES
+   ========================================================================== */
+.avatar-animated-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-[data-theme="light"] .border-slate-800,
-[data-theme="light"] .border-slate-700\/80,
-[data-theme="light"] .border-slate-700\/60 {
-  border-color: #cbd5e1 !important;
+.avatar-glow-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 28px;
+  background: conic-gradient(from 0deg, #00f2fe, #3b82f6, #8b5cf6, #ec4899, #00f2fe);
+  animation: rotateConic 5s linear infinite;
+  filter: blur(8px);
+  opacity: 0.85;
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
-/* Light Theme Buttons & Filter Tabs */
-[data-theme="light"] .skill-tab-btn,
-[data-theme="light"] .project-filter-btn {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-  color: #334155 !important;
+.avatar-border-spin {
+  position: absolute;
+  inset: -2px;
+  border-radius: 26px;
+  background: conic-gradient(from 0deg, #00f2fe, #3b82f6, #8b5cf6, #ec4899, #00f2fe);
+  animation: rotateConic 5s linear infinite;
+  z-index: 2;
 }
 
-[data-theme="light"] .skill-tab-btn.active,
-[data-theme="light"] .project-filter-btn.active {
-  background-color: #0284c7 !important;
-  color: #ffffff !important;
-  border-color: #0284c7 !important;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3) !important;
+.avatar-img-frame {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #090d16;
+  z-index: 3;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.2), 0 8px 25px rgba(0, 0, 0, 0.6);
+  animation: avatarFloat 4s ease-in-out infinite alternate;
 }
 
-[data-theme="light"] .skill-tab-btn.active i,
-[data-theme="light"] .project-filter-btn.active i {
-  color: #ffffff !important;
+@media (min-width: 640px) {
+  .avatar-img-frame {
+    width: 86px;
+    height: 86px;
+    border-radius: 26px;
+  }
 }
 
-[data-theme="light"] a.bg-slate-800\/90,
-[data-theme="light"] button.bg-slate-900\/80 {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-  color: #0f172a !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+.avatar-badge-verified {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #090d16;
+  border: 2px solid #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.8);
+  animation: pulseBadge 2.5s infinite;
 }
 
-/* Light Theme Accents & Tech Badges */
-[data-theme="light"] .text-cyan-400 {
-  color: #0284c7 !important;
-}
-[data-theme="light"] .text-cyan-300 {
-  color: #0369a1 !important;
-}
-[data-theme="light"] .text-purple-400 {
-  color: #7c3aed !important;
-}
-[data-theme="light"] .text-purple-300 {
-  color: #6d28d9 !important;
-}
-[data-theme="light"] .text-emerald-400 {
-  color: #059669 !important;
-}
-[data-theme="light"] .text-emerald-300 {
-  color: #047857 !important;
+@keyframes rotateConic {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-[data-theme="light"] .bg-slate-900 .text-cyan-400,
-[data-theme="light"] .bg-slate-900 .text-purple-400,
-[data-theme="light"] .bg-slate-900 .text-emerald-400,
-[data-theme="light"] .bg-slate-900 .text-amber-400 {
-  color: #0f172a !important;
+@keyframes avatarFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-4px) rotate(1deg); }
 }
 
-/* Light Theme Footer & Mobile Drawer */
-[data-theme="light"] footer {
-  background-color: #f1f5f9 !important;
-  border-color: #e2e8f0 !important;
-  color: #334155 !important;
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 242, 254, 0.7); }
+  50% { transform: scale(1.15); box-shadow: 0 0 18px rgba(0, 242, 254, 1); }
 }
 
-[data-theme="light"] #mobileNavDrawer {
-  background-color: rgba(255, 255, 255, 0.98) !important;
-  color: #0f172a !important;
+.hero-identity-card {
+  background: linear-gradient(135deg, rgba(13, 20, 36, 0.85) 0%, rgba(22, 32, 54, 0.7) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-[data-theme="light"] #mobileNavDrawer a {
-  color: #0f172a !important;
+.hero-identity-card:hover {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 242, 254, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.bio-glass-card {
+  background: linear-gradient(180deg, rgba(13, 20, 36, 0.85) 0%, rgba(9, 13, 22, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="light"] .hero-identity-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.1);
+}
+
+[data-theme="light"] .bio-glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+  border: 1px solid rgba(2, 132, 199, 0.15);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Float Slow Keyframe */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   APP SWITCHER & SEGMENTED CONTROLS (iOS 18 Style)
+   ========================================================================== */
+.ios-segmented-control {
+  display: inline-flex;
+  padding: 4px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  gap: 4px;
+}
+
+.ios-segment-btn {
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ios-segment-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ios-segment-btn.active {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.2) 0%, rgba(59, 130, 246, 0.25) 100%);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 242, 254, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 242, 254, 0.2);
+}
+
+/* ==========================================================================
+   FLOATING iOS QUICK-ACTION DOCK
+   ========================================================================== */
+.ios-dock {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(13, 20, 36, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 242, 254, 0.15);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ios-dock-item {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 16px;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ios-dock-item:hover {
+  transform: scale(1.22) translateY(-6px);
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 242, 254, 0.45);
+}
+
+.ios-dock-item .dock-tooltip {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: #000000;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ios-dock-item:hover .dock-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ==========================================================================
+   MINI MOBILE DEVICE FRAME CARDS (PROJECTS)
+   ========================================================================== */
+.device-card {
+  position: relative;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 32px;
+  overflow: hidden;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.device-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 242, 254, 0.45);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 35px -5px rgba(0, 242, 254, 0.25);
+}
+
+.device-screen-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #060911;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.device-screen-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.device-card:hover .device-screen-container img {
+  transform: scale(1.05);
+}
+
+/* Mini Phone Notch in Project Cards */
+.mini-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 14px;
+  background: #000000;
+  border-radius: 10px;
+  z-index: 15;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   MOBILE OS CONTROL CENTER & HARDWARE TILES
+   ========================================================================== */
+.control-center-tile {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.control-center-tile:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.25);
+}
+
+/* Interactive Data Stream Packet Keyframes */
+@keyframes packetPulse {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  50% { transform: translateY(-50%) scale(1.2); opacity: 1; filter: drop-shadow(0 0 10px #00f2fe); }
+  100% { transform: translateY(-100%) scale(0.8); opacity: 0; }
+}
+
+.packet-stream-dot {
+  animation: packetPulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Glow Utility Classes */
+.shadow-glow-cyan {
+  box-shadow: 0 10px 35px -8px rgba(0, 242, 254, 0.35);
+}
+.shadow-glow-purple {
+  box-shadow: 0 10px 35px -8px rgba(139, 92, 246, 0.35);
+}
+.shadow-glow-emerald {
+  box-shadow: 0 10px 35px -8px rgba(16, 185, 129, 0.35);
+}
+.shadow-glow-blue {
+  box-shadow: 0 10px 35px -8px rgba(59, 130, 246, 0.35);
+}
+.shadow-glow-amber {
+  box-shadow: 0 10px 35px -8px rgba(245, 158, 11, 0.35);
+}
+
+.metric-pill {
+  background: linear-gradient(90deg, rgba(13, 20, 36, 0.95) 0%, rgba(22, 32, 54, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
 }
 
 /* Typing cursor animation */
@@ -333,29 +665,23 @@ body {
 
 /* Scrolled Navbar Style */
 .nav-scrolled {
-  background: rgba(6, 9, 17, 0.85) !important;
-  backdrop-filter: blur(20px) !important;
+  background: rgba(6, 9, 17, 0.88) !important;
+  backdrop-filter: blur(24px) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="light"] .nav-scrolled {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Toast alert */
 .toast-msg {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: rgba(15, 22, 36, 0.95);
+  bottom: 85px;
+  right: 24px;
+  background: rgba(13, 20, 36, 0.95);
   border: 1px solid var(--accent-cyan);
   color: var(--text-main);
-  padding: 14px 24px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.25);
+  padding: 12px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 242, 254, 0.3);
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -367,42 +693,607 @@ body {
 }
 
 /* ==========================================================================
-   CATCHY UI & PROJECT HIGHLIGHT ENHANCEMENTS
+   LIGHT MODE COMPREHENSIVE CONTRAST & LUXURY DESIGN SYSTEM
    ========================================================================== */
-.hover-lift {
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.35s ease;
-}
-.hover-lift:hover {
-  transform: translateY(-5px) scale(1.008);
-}
-
-.shadow-glow-cyan {
-  box-shadow: 0 10px 35px -8px rgba(0, 242, 254, 0.35);
-}
-.shadow-glow-purple {
-  box-shadow: 0 10px 35px -8px rgba(127, 83, 172, 0.35);
-}
-.shadow-glow-emerald {
-  box-shadow: 0 10px 35px -8px rgba(0, 245, 160, 0.35);
-}
-.shadow-glow-blue {
-  box-shadow: 0 10px 35px -8px rgba(79, 172, 254, 0.35);
-}
-.shadow-glow-amber {
-  box-shadow: 0 10px 35px -8px rgba(255, 183, 3, 0.35);
-}
-.shadow-glow-pink {
-  box-shadow: 0 10px 35px -8px rgba(255, 0, 127, 0.35);
+[data-theme="light"],
+[data-theme="light"] body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(2, 132, 199, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 85% 35%, rgba(124, 58, 237, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.07) 0%, transparent 50%) !important;
 }
 
-.metric-pill {
-  background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.85) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(12px);
+/* --------------------------------------------------------------------------
+   Global Typography & Headings in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] strong,
+[data-theme="light"] b {
+  color: #0f172a !important;
+}
+
+/* Base text color overrides for light mode */
+[data-theme="light"] .text-white {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .text-slate-100,
+[data-theme="light"] .text-slate-200 {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .text-slate-300 {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .text-slate-400 {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* High-contrast jewel accents in Light Mode (replaces neon pastels with rich readable colors) */
+[data-theme="light"] .text-cyan-300,
+[data-theme="light"] .text-cyan-400 {
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .text-emerald-300,
+[data-theme="light"] .text-emerald-400 {
+  color: #047857 !important;
+}
+
+[data-theme="light"] .text-purple-300,
+[data-theme="light"] .text-purple-400 {
+  color: #6d28d9 !important;
+}
+
+[data-theme="light"] .text-blue-300,
+[data-theme="light"] .text-blue-400 {
+  color: #1d4ed8 !important;
+}
+
+[data-theme="light"] .text-amber-300,
+[data-theme="light"] .text-amber-400 {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .text-pink-300,
+[data-theme="light"] .text-pink-400 {
+  color: #be185d !important;
+}
+
+/* High-contrast gradient for Headline and Highlights in Light Mode */
+[data-theme="light"] .gradient-text,
+[data-theme="light"] .typing-effect,
+[data-theme="light"] #typingTarget {
+  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 45%, #6d28d9 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Badge & Chip background adjustments for light mode */
+[data-theme="light"] [class*="bg-cyan-500\/"],
+[data-theme="light"] .bg-cyan-500\/10,
+[data-theme="light"] .bg-cyan-500\/20 {
+  background: rgba(2, 132, 199, 0.1) !important;
+  border-color: rgba(2, 132, 199, 0.25) !important;
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] [class*="bg-emerald-500\/"],
+[data-theme="light"] .bg-emerald-500\/10,
+[data-theme="light"] .bg-emerald-500\/15,
+[data-theme="light"] .bg-emerald-500\/20 {
+  background: rgba(4, 120, 87, 0.1) !important;
+  border-color: rgba(4, 120, 87, 0.25) !important;
+  color: #047857 !important;
+}
+
+[data-theme="light"] [class*="bg-purple-500\/"],
+[data-theme="light"] .bg-purple-500\/10,
+[data-theme="light"] .bg-purple-500\/15,
+[data-theme="light"] .bg-purple-500\/20 {
+  background: rgba(109, 40, 217, 0.1) !important;
+  border-color: rgba(109, 40, 217, 0.25) !important;
+  color: #6d28d9 !important;
+}
+
+[data-theme="light"] [class*="bg-blue-500\/"],
+[data-theme="light"] .bg-blue-500\/15,
+[data-theme="light"] .bg-blue-500\/20 {
+  background: rgba(29, 78, 216, 0.1) !important;
+  border-color: rgba(29, 78, 216, 0.25) !important;
+  color: #1d4ed8 !important;
+}
+
+[data-theme="light"] [class*="bg-amber-500\/"],
+[data-theme="light"] .bg-amber-500\/15,
+[data-theme="light"] .bg-amber-500\/20 {
+  background: rgba(180, 83, 9, 0.1) !important;
+  border-color: rgba(180, 83, 9, 0.25) !important;
+  color: #b45309 !important;
+}
+
+[data-theme="light"] [class*="bg-pink-500\/"],
+[data-theme="light"] .bg-pink-500\/15,
+[data-theme="light"] .bg-pink-500\/20 {
+  background: rgba(190, 24, 93, 0.1) !important;
+  border-color: rgba(190, 24, 93, 0.25) !important;
+  color: #be185d !important;
+}
+
+/* --------------------------------------------------------------------------
+   Elements that MUST stay white (Buttons with gradients, OLED phone mockup screen)
+   -------------------------------------------------------------------------- */
+[data-theme="light"] .phone-screen,
+[data-theme="light"] .phone-screen *,
+[data-theme="light"] .phone-status-bar,
+[data-theme="light"] .phone-status-bar *,
+[data-theme="light"] .dynamic-island,
+[data-theme="light"] .dynamic-island *,
+[data-theme="light"] .phone-app-viewport,
+[data-theme="light"] .phone-app-viewport *,
+[data-theme="light"] button.bg-gradient-to-r,
+[data-theme="light"] button.bg-gradient-to-r *,
+[data-theme="light"] a.bg-gradient-to-r,
+[data-theme="light"] a.bg-gradient-to-r *,
+[data-theme="light"] a.bg-gradient-to-r span,
+[data-theme="light"] button.bg-gradient-to-r span,
+[data-theme="light"] .ios-segment-btn.active,
+[data-theme="light"] .ios-segment-btn.active *,
+[data-theme="light"] .ios-dock-item:hover,
+[data-theme="light"] .ios-dock-item:hover * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   Navigation Bar in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] #navbar ul {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] #navbar ul li a {
+  color: #334155 !important;
+}
+
+[data-theme="light"] #navbar ul li a:hover {
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] #themeToggle,
+[data-theme="light"] #mobileMenuBtn {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .nav-scrolled {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] #mobileNavDrawer {
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] #mobileNavDrawer a {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] #mobileNavDrawer a:hover {
+  color: #0284c7 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Hero & Cards in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] .bio-glass-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .bio-glass-card p {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .bio-glass-card strong {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .bio-glass-card span[class*="bg-slate-950"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+[data-theme="light"] .hero-identity-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* App Switcher Pills in Hero */
+[data-theme="light"] .hero-app-pill:not(.active) {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+}
+
+[data-theme="light"] .hero-app-pill:not(.active):hover {
+  background: rgba(2, 132, 199, 0.06) !important;
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .hero-app-pill.active {
+  background: rgba(2, 132, 199, 0.12) !important;
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.2) !important;
+}
+
+/* Hero Stats & Secondary Buttons */
+[data-theme="light"] .glass-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] a[href="https://github.com/sujitmore21"],
+[data-theme="light"] button[onclick*="copyToClipboard('sujitmore21@gmail.com'"] {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] a[href="https://github.com/sujitmore21"]:hover,
+[data-theme="light"] button[onclick*="copyToClipboard('sujitmore21@gmail.com'"]:hover {
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Floating Widgets (Rating, Crypto Ticker, HUD)
+   -------------------------------------------------------------------------- */
+[data-theme="light"] [class*="glass-card"][class*="shadow-glow"] {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] [class*="bg-slate-950\/90"]:not(.phone-screen *),
+[data-theme="light"] [class*="bg-slate-900\/90"]:not(.phone-screen *):not([data-theme="light"] footer) {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Smartphone Hardware Mockup (Maintains OLED App Display)
+   -------------------------------------------------------------------------- */
+[data-theme="light"] .phone-mockup {
+  border-color: #475569 !important;
+  background: #0f172a !important;
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.3), 0 0 35px rgba(2, 132, 199, 0.15) !important;
+}
+
+[data-theme="light"] .phone-screen {
+  background: #020617 !important;
+}
+
+[data-theme="light"] .phone-status-bar {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .phone-status-bar * {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .dynamic-island {
+  background: #000000 !important;
+}
+
+[data-theme="light"] .phone-home-indicator {
+  background: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   Skills Control Center in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] .control-center-tile {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .control-center-tile:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.15) !important;
+}
+
+[data-theme="light"] .control-center-tile span[class*="bg-slate-900"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .control-center-tile div[class*="bg-slate-950"] {
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Projects Grid & Device Cards in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] .device-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] .device-card:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 18px 40px rgba(2, 132, 199, 0.15) !important;
+}
+
+[data-theme="light"] .device-screen-container {
+  background: #090d16 !important;
+  border: 1px solid #cbd5e1 !important;
 }
 
 [data-theme="light"] .metric-pill {
-  background: linear-gradient(90deg, #f8fafc 0%, #e2e8f0 100%) !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+[data-theme="light"] .device-card span[class*="bg-slate-900"] {
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .device-card a[target="_blank"] {
+  background: #ffffff !important;
   border: 1px solid #cbd5e1 !important;
   color: #0f172a !important;
 }
+
+[data-theme="light"] .device-card a[target="_blank"]:hover {
+  background: rgba(2, 132, 199, 0.08) !important;
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] .device-card button.open-modal {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .device-card button.open-modal:hover {
+  background: rgba(2, 132, 199, 0.12) !important;
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Architecture & Reactive Stream in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] section#architecture {
+  background: rgba(241, 245, 249, 0.6) !important;
+}
+
+[data-theme="light"] section#architecture div[class*="bg-slate-900\/80"],
+[data-theme="light"] section#architecture div[class*="bg-slate-900\/90"] {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] #archTerminalOutput {
+  background: #0f172a !important;
+  color: #38bdf8 !important;
+  border: 1px solid #334155 !important;
+}
+
+[data-theme="light"] #archTerminalOutput code {
+  color: #38bdf8 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Experience Roadmap in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] section#experience div[class*="bg-slate-900\/80"] {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] section#experience .glass-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] section#experience .glass-card div[class*="bg-slate-900"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+[data-theme="light"] section#experience .glass-card span[class*="bg-slate-900"] {
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0284c7 !important;
+}
+
+/* Timeline node */
+[data-theme="light"] section#experience div[class*="rounded-full bg-slate-900"] {
+  background: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   Contact Section in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] section#contact {
+  background: rgba(241, 245, 249, 0.7) !important;
+}
+
+[data-theme="light"] section#contact .control-center-tile span[class*="bg-slate-900"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Footer in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] footer {
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+[data-theme="light"] footer a {
+  color: #475569 !important;
+}
+
+[data-theme="light"] footer a:hover {
+  color: #0284c7 !important;
+}
+
+[data-theme="light"] footer a[class*="bg-slate-900"] {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] footer a[class*="bg-slate-900"]:hover {
+  color: #0284c7 !important;
+  border-color: #0284c7 !important;
+}
+
+[data-theme="light"] footer a[class*="bg-slate-800"] {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Dialog & Drawer in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] #modalContainer {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="light"] .modal-drag-handle {
+  background: #cbd5e1 !important;
+}
+
+[data-theme="light"] #modalClose {
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] #modalClose:hover {
+  background: #e2e8f0 !important;
+}
+
+[data-theme="light"] #modalContainer div[class*="bg-slate-900"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Floating iOS Quick-Action Dock in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] .ios-dock {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.95) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12) !important;
+}
+
+[data-theme="light"] .ios-dock-item {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .ios-dock-item:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3) !important;
+}
+
+[data-theme="light"] .ios-dock-item:hover * {
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   iOS Segmented Control Filter Tabs in Light Mode
+   -------------------------------------------------------------------------- */
+[data-theme="light"] .ios-segmented-control {
+  background: #e2e8f0 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+[data-theme="light"] .ios-segment-btn {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .ios-segment-btn:hover {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .ios-segment-btn.active {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #0284c7 !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25) !important;
+}
+
+[data-theme="light"] .ios-segment-btn.active * {
+  color: #ffffff !important;
+}
+
+

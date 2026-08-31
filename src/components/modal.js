@@ -1,20 +1,25 @@
 /**
- * Modal Component
+ * Modal Component - Native Mobile Bottom Sheet & Spec Inspector
  */
 export function renderModal() {
   return `
-  <div id="projectModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none">
+  <div id="projectModal" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-xl flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none">
     <div class="glass-card max-w-2xl w-full rounded-3xl border border-slate-700/80 p-6 sm:p-8 shadow-2xl relative transition-all duration-300 scale-95" id="modalContainer">
       
+      <!-- Native Mobile Sheet Grabber Handle -->
+      <div class="w-12 h-1 bg-slate-600/80 rounded-full mx-auto mb-4 sm:hidden"></div>
+
       <!-- Close Button -->
-      <button id="modalClose" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-800/80 text-slate-400 flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:text-white hover:bg-slate-700">
+      <button id="modalClose" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-slate-800/80 text-slate-400 flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:text-white hover:bg-slate-700">
         &times;
       </button>
 
       <!-- Modal Header -->
-      <div class="pr-10 mb-6">
-        <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 font-mono text-xs font-semibold uppercase">Architecture Overview</span>
-        <h3 id="modalTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Project Details</h3>
+      <div class="pr-10 mb-5">
+        <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 font-mono text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-mobile-screen mr-1"></i> Mobile Architecture & Engineering Specs
+        </span>
+        <h3 id="modalTitle" class="text-2xl sm:text-3xl font-black text-white mt-2">App Details</h3>
       </div>
 
       <!-- Modal Body -->
@@ -24,8 +29,8 @@ export function renderModal() {
 
       <!-- Modal Footer -->
       <div class="mt-6 pt-4 border-t border-slate-800 flex justify-end">
-        <button id="modalCloseBtn" class="px-6 py-2.5 rounded-xl bg-slate-800 text-slate-200 font-semibold text-sm transition-all duration-300 hover:scale-105 hover:bg-slate-700">
-          Close Window
+        <button id="modalCloseBtn" class="px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs sm:text-sm transition-all duration-300 hover:scale-105">
+          Close Inspector
         </button>
       </div>
 
@@ -45,12 +50,12 @@ export function initModalEvents() {
   const projectDetailsMap = {
     'moneymic': {
       title: 'MoneyMic US — Real-Time Copy Trading Platform',
-      tech: 'Flutter, MVVM, Firebase, Supabase, Socket.IO, MQTT, Go Router',
+      tech: 'Flutter SDK, MVVM, Firebase, Supabase, Socket.IO, MQTT, Go Router, Riverpod',
       highlights: [
-        'Real-time trade replication with sub-second WebSocket and MQTT market data feeds.',
-        'Expert trader discovery, leaderboards, and portfolio performance tracking.',
+        'Real-time sub-second trade replication with duplex WebSocket and MQTT market data pipelines.',
+        'Expert master trader discovery, live profit leaderboards, and portfolio performance tracking.',
         'OAuth authentication with Google/Apple Sign-In & JWT token refresh flows.',
-        'Cross-platform deployment on Web, iOS, and Android.'
+        'Cross-platform deployment on Web, iOS, and Android with 50+ concurrent data streams.'
       ]
     },
     'icici': {
@@ -66,16 +71,17 @@ export function initModalEvents() {
     },
     'bitproex': {
       title: 'BitProEX — Crypto Derivatives Trading Platform',
-      tech: 'Flutter, BLoC/Cubit, Firebase, WebSockets, Clean Architecture',
+      tech: 'Flutter, BLoC/Cubit, Firebase, WebSockets, Clean Architecture, CustomPainter',
       highlights: [
-        'Global crypto derivatives exchange supporting spot and futures contracts.',
-        'BLoC state management for high-frequency live order book updates.',
-        'Integrated real-time trading charts, market indicators, and automated stop-loss/take-profit.'
+        'Global crypto derivatives exchange supporting spot and futures contracts with up to 125x leverage.',
+        'BLoC state management for high-frequency live order book updates and Level-2 depth charts.',
+        'Hardware-accelerated CustomPainter charting engine executing at 120 FPS.',
+        'Integrated real-time trading charts, technical market indicators, and automated stop-loss/take-profit.'
       ]
     },
     'rampwiz': {
       title: 'Rampwiz – Fiat-to-Crypto Payment Gateway',
-      tech: 'Flutter, Firebase, BLoC, Clean Architecture, Automated KYC, REST APIs',
+      tech: 'Flutter, Firebase, BLoC, Clean Architecture, Automated KYC, REST APIs, Apple Pay',
       highlights: [
         'Built a fiat-to-crypto payment gateway at Fibitpro incorporating automated KYC verification routines, compliance workflows, and multi-currency fiat payment channels via BLoC.',
         'Architected clean layered domain boundaries with isolated data sources, repositories, and state blocs.',
@@ -94,7 +100,7 @@ export function initModalEvents() {
       ]
     },
     'diabos': {
-      title: 'Diabos',
+      title: 'Diabos Global Maritime Logistics',
       tech: 'Flutter, SQLite, GetX, Clean Architecture, REST APIs, Background Sync',
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.diabos.globalfze&hl=en_IN',
       appStoreUrl: 'https://apps.apple.com/us/app/diabos-3-0/id6472989764',
@@ -102,7 +108,7 @@ export function initModalEvents() {
         'Offline-first capabilities with SQLite for maritime port agents in low-connectivity environments.',
         'Disbursement accounting, port cost estimation (DA Estimator), and towage contract tracking.',
         'Vessel tracking, PDA/APDA/RFQ/AF approval workflows, and interactive agent support.',
-        'Active usage by 500+ daily active logistics operators globally.'
+        'Active usage by 500+ daily active logistics operators globally across major international ports.'
       ]
     },
     'jiobp': {
@@ -119,7 +125,7 @@ export function initModalEvents() {
       ]
     },
     'jiobp_pulse': {
-      title: 'jio-bp pulse Charge Pro',
+      title: 'jio-bp pulse Charge Pro — EV Smart Mobility',
       tech: 'Flutter, Google Maps SDK, GetX, Clean Architecture, REST APIs, IoT / MQTT, Payment Gateway',
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.jiobp.pulse_charge&hl=en_IN',
       appStoreUrl: 'https://apps.apple.com/us/app/bp-pulse-ev-charging/id6448033048',
@@ -132,7 +138,7 @@ export function initModalEvents() {
       ]
     },
     'jiobp_myfield': {
-      title: 'Jio Bp MyField',
+      title: 'Jio Bp MyField — PV Asset Audit & Compliance',
       tech: 'Flutter, GetX, Clean Architecture, SQLite Offline, Camera & Image Compression, REST APIs',
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.jiobp.pvasset&hl=en_IN',
       appStoreUrl: 'https://apps.apple.com/us/app/jiobp-myfield/id6473767546',
@@ -145,7 +151,7 @@ export function initModalEvents() {
       ]
     },
     'pcs1x': {
-      title: 'PCS 1x — Indian Ports Association (Maritime Port Community System)',
+      title: 'PCS 1x — Indian Ports Association (National Port System)',
       tech: 'Flutter, Dart, Clean Architecture, REST APIs, Microservices, SQLite Offline, Enterprise Security, Role-Based Access Control',
       highlights: [
         'Spearheaded the PCS 1x platform for the Indian Ports Association under the Ministry of Shipping, Government of India.',
@@ -156,15 +162,63 @@ export function initModalEvents() {
       ]
     },
     'foodmonster': {
-      title: 'Food Monster — Plant-Based & Vegan Recipes Platform',
-      tech: 'Flutter, iOS, Clean Architecture, StoreKit / In-App Purchases, Firebase, OAuth Social Auth',
+      title: 'Food Monster: Vegan Recipes — One Green Planet',
+      tech: 'Core Java, Flutter, Firebase Database, Facebook Kit Login, Google Maps, SQLite, Payment Gateway, Push Notifications, Material Design',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.onegreenplanet.foodmonster',
       appStoreUrl: 'https://apps.apple.com/us/app/food-monster-vegan-recipes/id1052988561',
       highlights: [
-        'Top-rated culinary application by One Green Planet featuring 20,000+ plant-based, vegan, and dairy-free recipes.',
-        'Engineered seamless multi-tier In-App Purchase (IAP) subscriptions (monthly, bi-annual, annual) with StoreKit and receipt validation.',
-        'Implemented OAuth 2.0 social sign-in (Apple Sign-In, Google, Facebook, Email).',
-        'Engineered high-performance categorical recipe discovery, dietary filter algorithms, bookmarking, and offline recipe caching.',
-        'Published and maintained on Apple App Store with high active subscriber retention.'
+        'Top-ranked culinary application giving instant access to 500 free vegan, meatless, and dairy-free recipes.',
+        'Engineered paid monthly and yearly magazine subscription options unlocking 5,000+ archive recipes plus 10+ new recipes daily (3,000+ per year).',
+        'Implemented Facebook kit login with mobile number, Firebase real-time database, and payment gateway subscriptions.',
+        'Customized UI layouts with Material Design to support all Android screen densities and published on Google Play Store & App Store.',
+        'Managed development using JIRA, GitHub, Bitbucket across a cross-functional 4-person engineering team.'
+      ]
+    },
+    'nmmc_edusmart': {
+      title: 'NMMC Edu Smart — School & Student Performance Platform',
+      tech: 'Core Java, Android SDK, Web Services (JSON), Payment Gateway, Push Notifications, FCM, Google Maps, SQLite, Material Design XML',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=io.nmmc.appr',
+      highlights: [
+        'Parent-teacher-student communication and academic performance tracking application for Navi Mumbai Municipal Corporation schools.',
+        'Engineered modules for real-time attendance monitoring, marks and report card grades, homework assignments, and exam schedules.',
+        'Integrated FCM push notifications for instant broadcast of school circulars, notices, and PTA meetings.',
+        'Implemented offline SQLite storage and Google Maps school locator with secure fee payment gateway integration.',
+        'Led end-to-end Android UI/UX design, testing, bug fixing, and Google Play Store release across a 5-person team.'
+      ]
+    },
+    'ajmal_perfume': {
+      title: 'Ajmal Perfumes — Luxury Fragrance Mobile Store',
+      tech: 'Core Java, Android SDK, Web Services (JSON), Payment Gateway, Push Notifications, FCM, Google Maps, SQLite, XML Material Design',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.atnapps.apps.app54f2e035a5c8e',
+      highlights: [
+        'Flagship mobile e-commerce platform for Ajmal Perfumes — a prestigious multi-million dollar regional luxury fragrance brand established in 1951.',
+        'Engineered interactive fragrance discovery catalog featuring Oud, Amber, Rose notes, and luxury gift collections.',
+        'Integrated secure payment gateway checkout, user cart synchronization, and FCM promotional push notifications.',
+        'Integrated Google Maps SDK for physical store boutique location mapping across India and the Middle East.',
+        'Optimized Material Design XML layouts for all Android devices and managed publishing on Google Play Store.'
+      ]
+    },
+    'hotel_jobs': {
+      title: 'Hotel Jobs In India — Hospitality Career Network',
+      tech: 'Core Java, Android SDK, Web Services (JSON), Payment Gateway, Push Notifications, FCM, Google Maps, SQLite, Material Design',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.hire4hotels.phplogin',
+      highlights: [
+        'Specialized hospitality recruitment and job board mobile platform (Hire4Hotels) connecting top-tier 5-star hotels and jobseekers in India.',
+        'Engineered candidate profile creation, resume PDF upload, categorical job search (Executive Chef, Front Office, F&B Supervisor), and direct recruiter chat.',
+        'Integrated FCM instant alerts for application status updates, interview invitations, and job openings.',
+        'Implemented Google Maps SDK for geo-tagged hotel property location discovery and route mapping.',
+        'Handled full Android lifecycle from UI design to Play Store release with JIRA, GitHub, Slack, and Skype collaboration.'
+      ]
+    },
+    'marshalls_wallcoverings': {
+      title: 'Marshalls Wallcoverings — 3D Interior & Wallpaper Studio',
+      tech: 'Core Java, Android SDK, Web Services (JSON), Payment Gateway, Push Notifications, Firebase Database, Facebook Kit Login, Google Maps, SQLite, Material Design',
+      highlights: [
+        'Luxury interior decor mobile application for browsing 10,000+ designer wallpaper patterns, textures, and shades online.',
+        'Engineered interactive 3D Display Room View visualizer with 3,000+ living room, bedroom, and dining room wall simulations.',
+        'Integrated Facebook kit phone login, Firebase database sync, sample swatch ordering payment gateway, and Google Maps showroom locator.',
+        'Optimized high-resolution texture rendering and SQLite local caching for smooth catalog browsing across all Android devices.',
+        'Handled complete UI design, programming, bug fixing, and enhancement lifecycle with JIRA, GitHub, and Slack.'
       ]
     }
   };
@@ -197,13 +251,19 @@ export function initModalEvents() {
           }
 
           modalBody.innerHTML = `
-            <div class="p-3 rounded-xl bg-slate-900/90 font-mono text-xs text-cyan-400 border border-slate-800 mb-4">
-              <strong>Tech Stack:</strong> ${details.tech}
+            <div class="p-3 rounded-2xl bg-slate-900/90 font-mono text-xs text-cyan-300 border border-slate-800 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-layer-group text-cyan-400"></i>
+              <span><strong>Stack:</strong> ${details.tech}</span>
             </div>
             ${storeLinksHtml}
-            <h4 class="font-bold text-white text-sm mb-2">Key Technical Deliverables:</h4>
-            <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside leading-relaxed">
-              ${details.highlights.map(h => `<li>${h}</li>`).join('')}
+            <h4 class="font-black text-white text-sm mb-2.5">Key Technical Deliverables & Metrics:</h4>
+            <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed">
+              ${details.highlights.map(h => `
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-circle-check text-cyan-400 mt-1 text-xs shrink-0"></i>
+                  <span>${h}</span>
+                </li>
+              `).join('')}
             </ul>
           `;
         }

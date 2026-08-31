@@ -4,7 +4,7 @@
 export function initLiveTickerSimulation() {
   const btcPriceElem = document.getElementById('btcPrice');
   const ethPriceElem = document.getElementById('ethPrice');
-  if (!btcPriceElem || !ethPriceElem) return;
+  const heroBtcPrice = document.getElementById('heroBtcPrice');
 
   let btcPrice = 64250.50;
   let ethPrice = 3480.20;
@@ -16,10 +16,20 @@ export function initLiveTickerSimulation() {
     btcPrice += btcDelta;
     ethPrice += ethDelta;
 
-    btcPriceElem.textContent = '$' + btcPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    ethPriceElem.textContent = '$' + ethPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const formattedBtc = '$' + btcPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const formattedEth = '$' + ethPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-    btcPriceElem.style.color = btcDelta >= 0 ? 'var(--accent-emerald)' : 'var(--accent-pink)';
-    ethPriceElem.style.color = ethDelta >= 0 ? 'var(--accent-emerald)' : 'var(--accent-pink)';
+    if (btcPriceElem) {
+      btcPriceElem.textContent = formattedBtc;
+      btcPriceElem.style.color = btcDelta >= 0 ? 'var(--accent-emerald)' : 'var(--accent-pink)';
+    }
+    if (ethPriceElem) {
+      ethPriceElem.textContent = formattedEth;
+      ethPriceElem.style.color = ethDelta >= 0 ? 'var(--accent-emerald)' : 'var(--accent-pink)';
+    }
+    if (heroBtcPrice) {
+      heroBtcPrice.textContent = formattedBtc;
+      heroBtcPrice.style.color = btcDelta >= 0 ? '#10b981' : '#ec4899';
+    }
   }, 1200);
 }
