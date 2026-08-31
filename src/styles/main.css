@@ -978,8 +978,63 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   Hero Floating Widgets (Rating, Crypto Ticker, HUD)
+   Hero Floating Widgets (Rating, Crypto Ticker, 120 FPS HUD) in Light Mode
    -------------------------------------------------------------------------- */
+[data-theme="light"] .floating-widget {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09), 0 0 20px rgba(2, 132, 199, 0.1) !important;
+}
+
+[data-theme="light"] .floating-widget .widget-title,
+[data-theme="light"] .floating-widget .text-white {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+[data-theme="light"] .floating-widget .widget-sub,
+[data-theme="light"] .floating-widget .text-slate-400 {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+}
+
+[data-theme="light"] .floating-widget .text-slate-200,
+[data-theme="light"] .floating-widget .text-slate-300 {
+  color: #334155 !important;
+  -webkit-text-fill-color: #334155 !important;
+}
+
+[data-theme="light"] .floating-widget .border-slate-800 {
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme="light"] .floating-widget .text-cyan-300 {
+  color: #0284c7 !important;
+  -webkit-text-fill-color: #0284c7 !important;
+}
+
+[data-theme="light"] .floating-widget .text-purple-300 {
+  color: #7c3aed !important;
+  -webkit-text-fill-color: #7c3aed !important;
+}
+
+[data-theme="light"] .floating-widget .text-emerald-400 {
+  color: #059669 !important;
+  -webkit-text-fill-color: #059669 !important;
+}
+
+[data-theme="light"] .floating-widget .text-amber-400 {
+  color: #d97706 !important;
+  -webkit-text-fill-color: #d97706 !important;
+}
+
+[data-theme="light"] .floating-widget:hover {
+  border-color: #0284c7 !important;
+  box-shadow: 0 20px 45px rgba(2, 132, 199, 0.22) !important;
+}
+
 [data-theme="light"] [class*="glass-card"][class*="shadow-glow"] {
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;

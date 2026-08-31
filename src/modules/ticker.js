@@ -29,7 +29,7 @@ export function initLiveTickerSimulation() {
     }
     if (heroBtcPrice) {
       heroBtcPrice.textContent = formattedBtc;
-      heroBtcPrice.style.color = btcDelta >= 0 ? '#10b981' : '#ec4899';
+      heroBtcPrice.style.color = btcDelta >= 0 ? 'var(--accent-emerald)' : 'var(--accent-pink)';
     }
   }, 1200);
 }

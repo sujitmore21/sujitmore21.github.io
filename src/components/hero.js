@@ -10,7 +10,7 @@ export function renderHero() {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
-        <!-- Left Column: Product Manifesto & Interactive App Switcher -->
+        <!-- Left Column: Product Manifesto & Executive Bio -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
           <!-- Profile Identity Header with Animated Glowing Avatar -->
@@ -31,8 +31,8 @@ export function renderHero() {
             <div class="flex flex-col items-center sm:items-start space-y-1.5 text-center sm:text-left">
               <div class="flex items-center gap-2">
                 <span class="text-xl sm:text-2xl font-black text-white tracking-tight">Sujit More</span>
-                <span class="px-2 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300 text-[11px] font-mono font-bold border border-cyan-500/30">
-                  9+ Yrs Exp
+                <span class="px-2.5 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300 text-[11px] font-mono font-bold border border-cyan-500/30">
+                  9+ Yrs Software Engineering
                 </span>
               </div>
               <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
@@ -41,10 +41,10 @@ export function renderHero() {
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <i class="fa-solid fa-mobile-screen-button text-cyan-400"></i> Senior Mobile Architect
+                  <i class="fa-solid fa-mobile-screen-button text-cyan-400"></i> Senior Flutter Developer & Mobile Architect
                 </span>
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/25 text-xs font-mono font-semibold">
-                  <i class="fa-solid fa-code"></i> Flutter & Android Lead
+                  <i class="fa-solid fa-code-branch"></i> 6+ Yrs Flutter • 3+ Android
                 </span>
               </div>
             </div>
@@ -53,38 +53,69 @@ export function renderHero() {
           <!-- Headline with typing effect -->
           <div class="space-y-1">
             <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider shadow-glow-cyan mb-1">
-              <i class="fa-solid fa-sparkles text-cyan-400"></i> Flagship Mobile Engineering
+              <i class="fa-solid fa-sparkles text-cyan-400"></i> Enterprise & Fintech Systems Architecture
             </div>
-            <div class="min-h-[90px] sm:min-h-[115px] lg:min-h-[130px] flex flex-col justify-center">
+            <div class="min-h-[85px] sm:min-h-[105px] lg:min-h-[120px] flex flex-col justify-center">
               <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
                 Architecting <br class="hidden sm:inline">
                 <span class="typing-effect text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-400 inline-block" id="typingTarget">
-                  Fintech & Copy Trading Apps
+                  Senior Flutter Developer & Mobile Architect
                 </span>
               </h1>
             </div>
           </div>
 
-          <!-- Subheadline & Capability Card -->
-          <div class="bio-glass-card p-5 sm:p-6 rounded-2xl space-y-3.5 text-left">
-            <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
-              Senior Mobile Architect with <strong class="text-white font-extrabold">9+ years of engineering experience</strong> (<span class="text-cyan-300 font-semibold font-mono">6+ Flutter, 3 Android</span>). Specializing in <strong class="text-emerald-400 font-semibold">Fintech Copy Trading</strong>, <strong class="text-blue-400 font-semibold">Enterprise Banking (ICICI Bank US)</strong>, Low-Latency WebSockets & MQTT streams, and Clean Architecture for <strong class="text-white font-bold">500k+ global users</strong>.
+          <!-- Subheadline & Executive Bio Card -->
+          <div class="bio-glass-card p-5 sm:p-6 rounded-2xl space-y-4 text-left">
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+              Senior <strong class="text-white font-extrabold">Flutter Developer and Mobile Architect with 9+ years of software engineering experience</strong>, including <strong class="text-cyan-300 font-semibold font-mono">6+ years specializing in Flutter and 3+ years in native Android development</strong>. Experienced in designing and delivering <strong class="text-emerald-400 font-semibold">high-performance, scalable mobile & web applications</strong> for enterprise, fintech, banking, crypto trading, EV mobility, logistics, and IoT platforms.
             </p>
             
-            <!-- Micro Capabilities Strip -->
-            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-cyan-300 flex items-center gap-1.5 shadow-sm">
-                <i class="fa-solid fa-microchip text-cyan-400"></i> 120 FPS GPU Canvas
+            <!-- Core Expertise Badges -->
+            <div class="flex flex-wrap items-center gap-1.5 pt-1 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/25 font-semibold">
+                <i class="fa-solid fa-layer-group text-cyan-400 mr-1"></i> Clean Architecture & MVVM
               </span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-emerald-300 flex items-center gap-1.5 shadow-sm">
-                <i class="fa-solid fa-shield-halved text-emerald-400"></i> ICICI Knox Security
+              <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-300 border border-purple-500/25 font-semibold">
+                <i class="fa-solid fa-cubes text-purple-400 mr-1"></i> BLoC • Riverpod • GetX
               </span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-purple-300 flex items-center gap-1.5 shadow-sm">
-                <i class="fa-solid fa-bolt text-purple-400"></i> &lt;50ms WebSocket Ticks
+              <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/25 font-semibold">
+                <i class="fa-solid fa-bolt text-emerald-400 mr-1"></i> WebSockets & MQTT (&lt;50ms)
               </span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-amber-300 flex items-center gap-1.5 shadow-sm">
-                <i class="fa-solid fa-mobile-screen text-amber-400"></i> 15+ Production Apps
+              <span class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-300 border border-blue-500/25 font-semibold">
+                <i class="fa-solid fa-shield-halved text-blue-400 mr-1"></i> AES-256 Banking & Knox
               </span>
+              <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 border border-amber-500/25 font-semibold">
+                <i class="fa-solid fa-database text-amber-400 mr-1"></i> Offline-First & Sync
+              </span>
+            </div>
+
+            <!-- Executive Pillars Showcase: Enterprise, Fintech & Services -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 border-t border-slate-800/80 text-xs">
+              <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-1">
+                <div class="font-bold text-white flex items-center gap-1.5 text-xs">
+                  <i class="fa-solid fa-city text-blue-400"></i> Enterprise Systems
+                </div>
+                <p class="text-[11px] text-slate-400 leading-snug">
+                  25+ production apps delivered for ICICI Bank US, Reliance Jio-bp, and Diabos Global.
+                </p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-1">
+                <div class="font-bold text-white flex items-center gap-1.5 text-xs">
+                  <i class="fa-solid fa-chart-line text-emerald-400"></i> Fintech & Trading
+                </div>
+                <p class="text-[11px] text-slate-400 leading-snug">
+                  Real-time copy trading, live order books, sub-50ms feeds & multi-gateway payments.
+                </p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 space-y-1">
+                <div class="font-bold text-white flex items-center gap-1.5 text-xs">
+                  <i class="fa-solid fa-handshake-angle text-cyan-400"></i> Consulting & Hire
+                </div>
+                <p class="text-[11px] text-slate-400 leading-snug">
+                  Available for contracts, architecture audits, code reviews, TDD & full-time lead roles.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -116,14 +147,17 @@ export function renderHero() {
           </div>
 
           <!-- CTAs -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
             <a href="#projects" class="px-6 py-3.5 rounded-2xl font-bold text-sm sm:text-base text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 shadow-glow-cyan transition-all duration-300 hover:scale-105 hover:shadow-cyan-400/50 flex items-center gap-2">
-              <i class="fa-solid fa-layer-group"></i> Explore 15 Production Apps
+              <i class="fa-solid fa-layer-group"></i> Explore 25+ Production Apps
             </a>
-            <a href="https://github.com/sujitmore21" target="_blank" class="px-6 py-3.5 rounded-2xl font-semibold text-sm sm:text-base text-slate-200 bg-slate-900/90 border border-slate-800 transition-all duration-300 hover:scale-105 hover:border-cyan-400/60 hover:text-white flex items-center gap-2">
+            <a href="#contact" class="px-6 py-3.5 rounded-2xl font-semibold text-sm sm:text-base text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 transition-all duration-300 hover:scale-105 hover:bg-cyan-500/20 hover:border-cyan-400 flex items-center gap-2">
+              <i class="fa-solid fa-handshake text-cyan-400"></i> Hire / Consulting
+            </a>
+            <a href="https://github.com/sujitmore21" target="_blank" class="px-5 py-3.5 rounded-2xl font-semibold text-sm sm:text-base text-slate-200 bg-slate-900/90 border border-slate-800 transition-all duration-300 hover:scale-105 hover:border-cyan-400/60 hover:text-white flex items-center gap-2">
               <i class="fa-brands fa-github text-lg"></i> GitHub
             </a>
-            <button onclick="copyToClipboard('sujitmore21@gmail.com', 'Email')" class="px-5 py-3.5 rounded-2xl font-medium text-xs sm:text-sm text-slate-300 bg-slate-950/80 border border-slate-800/80 transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 flex items-center gap-2">
+            <button onclick="copyToClipboard('sujitmore21@gmail.com', 'Email')" class="px-4 py-3.5 rounded-2xl font-medium text-xs sm:text-sm text-slate-300 bg-slate-950/80 border border-slate-800/80 transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 flex items-center gap-2" title="Click to copy email">
               <i class="fa-solid fa-envelope text-cyan-400"></i> sujitmore21@gmail.com
             </button>
           </div>
@@ -135,7 +169,7 @@ export function renderHero() {
               <div class="text-xs text-slate-400 font-medium mt-0.5">Years Experience</div>
             </div>
             <div class="p-3.5 rounded-2xl glass-card text-center transition-all duration-300 hover:scale-105 hover:shadow-glow-purple hover:border-purple-400/40">
-              <div class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono" data-count="15" data-suffix="">15</div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono" data-count="25" data-suffix="+">25+</div>
               <div class="text-xs text-slate-400 font-medium mt-0.5">Production Apps</div>
             </div>
             <div class="p-3.5 rounded-2xl glass-card text-center transition-all duration-300 hover:scale-105 hover:shadow-glow-emerald hover:border-emerald-400/40">
@@ -180,13 +214,13 @@ export function renderHero() {
           <!-- Floating Widget 1: Real-Time WebSocket Ticker (Top-Right) -->
           <div class="floating-widget -top-4 -right-2 sm:-right-6 p-3.5 rounded-2xl max-w-[200px] border border-cyan-400/40 shadow-glow-cyan hidden sm:block">
             <div class="flex items-center justify-between gap-2 mb-1">
-              <span class="flex items-center gap-1.5 text-[11px] font-bold text-white font-mono">
+              <span class="flex items-center gap-1.5 text-[11px] font-bold text-white font-mono widget-title">
                 <i class="fa-brands fa-bitcoin text-amber-400"></i> BTC / USDT
               </span>
               <span class="px-1.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 text-[9px] font-mono font-bold animate-pulse">LIVE</span>
             </div>
             <div class="text-base font-extrabold text-emerald-400 font-mono" id="heroBtcPrice">$64,250.50</div>
-            <div class="text-[10px] text-cyan-300 font-mono mt-0.5 flex items-center justify-between">
+            <div class="text-[10px] text-cyan-300 font-mono mt-0.5 flex items-center justify-between widget-sub">
               <span>Sub-50ms</span>
               <span class="text-emerald-400 font-semibold">+3.45% ▲</span>
             </div>
@@ -199,11 +233,11 @@ export function renderHero() {
                 <i class="fa-solid fa-microchip"></i>
               </div>
               <div>
-                <div class="text-[11px] font-bold text-white font-mono">120 FPS Engine</div>
-                <div class="text-[9px] text-purple-300 font-mono">CustomPainter Canvas</div>
+                <div class="text-[11px] font-bold text-white font-mono widget-title">120 FPS Engine</div>
+                <div class="text-[9px] text-purple-300 font-mono widget-sub">CustomPainter Canvas</div>
               </div>
             </div>
-            <div class="flex items-center justify-between text-[10px] text-slate-300 font-mono pt-1 border-t border-slate-800">
+            <div class="flex items-center justify-between text-[10px] text-slate-300 font-mono pt-1 border-t border-slate-800 widget-sub">
               <span class="text-emerald-400 font-bold">0 Jank Drops</span>
               <span class="text-slate-400">Riverpod 2.0</span>
             </div>
@@ -212,8 +246,8 @@ export function renderHero() {
           <!-- Floating Widget 3: Biometric Security & App Store Rating (Top-Left) -->
           <div class="floating-widget -top-6 -left-4 sm:-left-6 px-3.5 py-2 rounded-2xl border border-emerald-400/40 shadow-glow-emerald hidden sm:flex items-center gap-2" style="animation-delay: -1.5s;">
             <span class="text-amber-400 text-xs">★★★★★</span>
-            <span class="text-[11px] font-bold text-white font-mono">4.9/5.0</span>
-            <span class="text-[10px] text-slate-400 font-mono">• 500k+</span>
+            <span class="text-[11px] font-bold text-white font-mono widget-title">4.9/5.0</span>
+            <span class="text-[10px] text-slate-400 font-mono widget-sub">• 500k+ Users</span>
           </div>
 
           <!-- Realistic Smartphone Device Frame -->
@@ -283,11 +317,11 @@ export function renderHero() {
 
 export function initHeroTypingEffect() {
   const words = [
-    'Fintech & Copy Trading Apps',
-    'Enterprise Banking Systems (ICICI)',
-    '120 FPS High-Speed Mobile UIs',
-    'Low-Latency WebSocket Streams',
-    '15+ Production Mobile Apps'
+    'Senior Flutter Developer & Architect',
+    'Fintech, Banking & Real-Time Systems',
+    'ICICI Bank US & Reliance Jio-bp',
+    'Copy-Trading & Sub-50ms WebSockets',
+    '25+ Production Mobile & Web Apps'
   ];
   let wordIndex = 0;
   let charIndex = 0;
